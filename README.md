@@ -1,12 +1,25 @@
-# Association Respect — Plateforme d'Audit (prototype)
+# RESPECT — Site de l'association (prototype)
 
-Prototype de démonstration du dispositif d'audit anonyme de l'association :
-le **sas d'anonymisation**. Un lien unique est diffusé à toute l'entreprise ;
-en le suivant, chaque salarié reçoit un simple jeton de session généré dans
-son navigateur, sans que son identité, son e-mail ou son adresse IP ne soient
-jamais enregistrés.
+Site de démonstration de l'association **RESPECT** :
 
-## Fonctionnement
+- `index.html` — le site vitrine de l'association (mission, valeurs,
+  actions, témoignage, contact)
+- `outil-audit.html` — le **sas d'anonymisation**, prototype d'un outil
+  d'audit interne anonyme pour les entreprises, présenté comme l'une des
+  actions concrètes de l'association
+
+## Le site vitrine (`index.html`)
+
+Présente RESPECT (Reconnaissance, Écoute, Sécurité, Protection, Équité,
+Courage, Transparence) : sa mission, ses 3 valeurs (écoute, protection,
+soutien), ses 4 actions concrètes, un témoignage anonymisé (illustratif) et
+les coordonnées de contact.
+
+## L'outil d'audit (`outil-audit.html`)
+
+Un lien unique est diffusé à toute l'entreprise ; en le suivant, chaque
+salarié reçoit un simple jeton de session généré dans son navigateur, sans
+que son identité, son e-mail ou son adresse IP ne soient jamais enregistrés.
 
 Deux vues sont accessibles en haut de l'écran :
 
@@ -22,10 +35,10 @@ partagées entre onglets), puis consultez la vue auditeur : le score global,
 le graphique par thématique et le tableau chiffré apparaissent
 automatiquement, avec un export CSV possible.
 
-## Lancer le prototype
+## Lancer le site
 
-Le prototype est une page statique (HTML/CSS/JS, sans dépendance ni étape de
-build). Servez le dossier avec n'importe quel serveur statique, par exemple :
+C'est un site statique (HTML/CSS/JS, sans dépendance ni étape de build).
+Servez le dossier avec n'importe quel serveur statique, par exemple :
 
 ```bash
 python3 -m http.server 8000
@@ -36,15 +49,18 @@ python3 -m http.server 8000
 plupart des navigateurs, mais certains restreignent `localStorage` sur les
 URL `file://` — un serveur local est donc recommandé.)
 
-Les réponses sont stockées uniquement dans le `localStorage` du navigateur
-(partagé entre les onglets d'un même navigateur) ; le bouton *Réinitialiser
-les données de démonstration* dans la vue auditeur permet de repartir de
-zéro.
+Les réponses au questionnaire sont stockées uniquement dans le
+`localStorage` du navigateur (partagé entre les onglets d'un même
+navigateur) ; le bouton *Réinitialiser les données de démonstration* dans la
+vue auditeur permet de repartir de zéro.
+
+Le site est installable comme application (PWA) sur iPhone et Android.
 
 ## Limites de cette version de démonstration
 
-Les mécanismes d'anonymisation et de verrouillage sont fonctionnels, mais la
-mise en production réelle reste à construire : hébergement, génération d'un
-lien unique par entreprise, stockage des réponses côté serveur, et
-conformité RGPD complète.
-
+Les mécanismes d'anonymisation et de verrouillage sont fonctionnels, mais
+plusieurs éléments restent à compléter avant une mise en production réelle :
+l'identité légale de l'association (mentions légales), les coordonnées
+définitives, le contenu des actions et le témoignage (actuellement
+illustratifs), ainsi que l'hébergement dédié et le stockage côté serveur
+pour un usage à grande échelle.

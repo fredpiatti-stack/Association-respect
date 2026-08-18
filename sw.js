@@ -1,11 +1,13 @@
-const CACHE_NAME = "respect-v1";
+const CACHE_NAME = "respect-v2";
 const CORE_ASSETS = [
   "/index.html",
+  "/outil-audit.html",
   "/mentions-legales.html",
   "/confidentialite.html",
   "/cgu.html",
   "/css/style.css",
   "/js/app.js",
+  "/js/site.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
