@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Respect</title>
+<meta name="description" content="Comment le prototype Respect traite les données : jeton anonyme, stockage local uniquement, aucune donnée transmise à un serveur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">
+      <span class="nav__mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 22 7v6c0 6-4.2 9.4-10 11-5.8-1.6-10-5-10-11V7z" fill="url(#markGrad)"/>
+          <path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="markGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366F1"/>
+              <stop offset="1" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      Respect
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="index.html#comment-ca-marche">Comment ça marche</a>
+      <a href="index.html#confidentialite">Confidentialité</a>
+      <a href="index.html#demo">Démo</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="index.html#demo">Essayer la démo</a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <a class="back-link" href="index.html">← Retour au site</a>
+  <h1>Politique de confidentialité</h1>
+  <p class="legal-updated">Dernière mise à jour : 18 août 2026</p>
+
+  <p class="legal-intro">
+    Cette page explique, en toute transparence, quelles données ce prototype
+    traite réellement — et surtout celles qu'il ne traite pas. Le principe du
+    « sas d'anonymisation » est au cœur du fonctionnement technique du site,
+    pas seulement de son discours marketing.
+  </p>
+
+  <ul class="legal-toc">
+    <li><a href="#responsable">Responsable de traitement</a></li>
+    <li><a href="#donnees">Données traitées</a></li>
+    <li><a href="#base-legale">Base légale</a></li>
+    <li><a href="#cookies">Cookies et traceurs</a></li>
+    <li><a href="#conservation">Durée de conservation</a></li>
+    <li><a href="#destinataires">Destinataires des données</a></li>
+    <li><a href="#droits">Vos droits</a></li>
+    <li><a href="#securite">Sécurité</a></li>
+    <li><a href="#evolution">Évolution de cette politique</a></li>
+  </ul>
+
+  <section id="responsable">
+    <h2>1. Responsable de traitement</h2>
+    <p>
+      Le responsable de traitement au sens du RGPD est
+      <span class="legal-placeholder">à compléter</span> (nom de l'association),
+      joignable à <span class="legal-placeholder">à compléter</span>.
+    </p>
+  </section>
+
+  <section id="donnees">
+    <h2>2. Quelles données sont traitées</h2>
+    <p>
+      Ce site est une page statique, sans serveur applicatif ni base de données
+      côté éditeur. Concrètement :
+    </p>
+    <ul>
+      <li>
+        <strong>Aucune identité n'est collectée.</strong> Le site ne demande
+        jamais de nom, d'e-mail, ni aucun identifiant permettant de vous
+        reconnaître.
+      </li>
+      <li>
+        <strong>Aucune adresse IP n'est enregistrée</strong> par le site
+        lui-même (il n'y a pas de serveur applicatif qui journalise les
+        visites).
+      </li>
+      <li>
+        <strong>Un jeton de session anonyme</strong> (un identifiant aléatoire,
+        de type UUID) est généré directement dans votre navigateur au moment
+        où vous commencez le questionnaire. Il ne contient aucune information
+        sur vous et n'est relié à aucune identité.
+      </li>
+      <li>
+        <strong>Vos réponses au questionnaire</strong> (les notes de 1 à 5 par
+        thématique et le commentaire libre optionnel) sont enregistrées
+        uniquement dans le <code>localStorage</code> de votre navigateur —
+        c'est-à-dire sur votre propre appareil. Elles ne sont
+        <strong>jamais envoyées à un serveur</strong> : le site n'a pas de
+        backend capable de les recevoir.
+      </li>
+    </ul>
+    <p>
+      En pratique, l'éditeur du site n'a lui-même accès à aucune réponse
+      individuelle : ces données ne quittent pas votre navigateur.
+    </p>
+  </section>
+
+  <section id="base-legale">
+    <h2>3. Base légale</h2>
+    <p>
+      Le questionnaire est rempli volontairement par la personne qui le
+      souhaite ; aucune donnée à caractère personnel n'étant collectée par le
+      site, le traitement au sens du RGPD est extrêmement limité. Les données
+      techniques minimales nécessaires au fonctionnement du site (le jeton
+      anonyme, les préférences d'affichage) reposent sur l'intérêt légitime
+      à faire fonctionner le service.
+    </p>
+  </section>
+
+  <section id="cookies">
+    <h2>4. Cookies et traceurs</h2>
+    <p>
+      Ce site ne dépose <strong>aucun cookie de mesure d'audience ni de
+      traceur publicitaire</strong>. Il n'utilise pas non plus de cookie pour
+      vous identifier.
+    </p>
+    <p>
+      Par transparence : les polices de caractères du site sont chargées
+      depuis <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code> et
+      <code>fonts.gstatic.com</code>). Cela entraîne une requête réseau vers
+      les serveurs de Google, qui peut recevoir votre adresse IP à cette
+      occasion, selon les règles de confidentialité de Google. Aucune autre
+      donnée n'est partagée avec ce tiers.
+    </p>
+  </section>
+
+  <section id="conservation">
+    <h2>5. Durée de conservation</h2>
+    <p>
+      Vos réponses restent stockées dans le navigateur utilisé, sans limite de
+      durée fixée par le site, jusqu'à ce que vous les effaciez vous-même — en
+      vidant les données du navigateur pour ce site, ou en utilisant le bouton
+      <strong>« Réinitialiser les données de démonstration »</strong> présent
+      dans la vue auditeur.
+    </p>
+  </section>
+
+  <section id="destinataires">
+    <h2>6. Destinataires des données</h2>
+    <p>
+      Aucun. Les réponses ne sont transmises à aucun tiers, ni à l'éditeur du
+      site, ni à un prestataire, puisqu'elles ne quittent jamais votre
+      navigateur.
+    </p>
+  </section>
+
+  <section id="droits">
+    <h2>7. Vos droits</h2>
+    <p>
+      Le RGPD vous donne des droits d'accès, de rectification, d'effacement,
+      de limitation et d'opposition sur vos données personnelles. Dans le cas
+      de ce prototype, ces droits s'exercent directement par vous-même,
+      puisque les seules données existantes (vos réponses) se trouvent dans
+      votre propre navigateur : vous pouvez les consulter, les modifier ou les
+      supprimer à tout moment sans avoir à contacter qui que ce soit.
+    </p>
+    <p>
+      Pour toute question sur cette politique, vous pouvez néanmoins écrire à
+      <span class="legal-placeholder">à compléter</span>. Vous disposez
+      également du droit d'introduire une réclamation auprès de la CNIL
+      (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).
+    </p>
+  </section>
+
+  <section id="securite">
+    <h2>8. Sécurité</h2>
+    <p>
+      L'absence de transmission réseau de vos réponses constitue, de fait, la
+      principale garantie de sécurité de ce prototype : des données qui ne
+      quittent jamais votre appareil ne peuvent pas être interceptées,
+      piratées ou fuiter depuis un serveur.
+    </p>
+  </section>
+
+  <section id="evolution">
+    <h2>9. Évolution de cette politique</h2>
+    <p>
+      Ce site est un <strong>prototype de démonstration</strong>. Si une
+      version en production venait à introduire un stockage côté serveur (par
+      exemple pour agréger les réponses de plusieurs entreprises), cette
+      politique de confidentialité devrait être entièrement revue en
+      conséquence, avec une analyse d'impact RGPD dédiée. Voir aussi les
+      <a href="mentions-legales.html">mentions légales</a> et les
+      <a href="cgu.html">conditions générales d'utilisation</a>.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2 22 7v6c0 6-4.2 9.4-10 11-5.8-1.6-10-5-10-11V7z" fill="url(#markGradFooter)"/>
+            <path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="markGradFooter" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        Respect
+      </a>
+      <p>Le sas d'anonymisation pour des audits internes en toute confiance.</p>
+    </div>
+    <p class="footer__disclaimer">
+      Version de démonstration : les mécanismes d'anonymisation et de verrouillage sont
+      fonctionnels, mais la mise en production réelle (hébergement, génération d'un lien
+      par entreprise, conformité RGPD complète) reste à construire.
+    </p>
+    <nav class="footer__links" aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cgu.html">Conditions générales d'utilisation</a>
+    </nav>
+    <p class="footer__legal">© 2026 Association Respect — Prototype de démonstration, non destiné à un usage en production.</p>
+  </div>
+</footer>
+
+</body>
+</html>
