@@ -47,3 +47,4 @@ Les mécanismes d'anonymisation et de verrouillage sont fonctionnels, mais la
 mise en production réelle reste à construire : hébergement, génération d'un
 lien unique par entreprise, stockage des réponses côté serveur, et
 conformité RGPD complète.
+
