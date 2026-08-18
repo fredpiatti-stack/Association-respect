@@ -542,6 +542,7 @@ h1, h2, h3 {
 .scale__option {
   flex: 1 1 0;
   min-width: 56px;
+  display: flex;
 }
 
 .scale__option input {
@@ -552,9 +553,11 @@ h1, h2, h3 {
 }
 
 .scale__option label {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   border: 1px solid var(--border);
   border-radius: 10px;
