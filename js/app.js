@@ -347,7 +347,7 @@
     });
   }
 
-  function exportCsv(stats, totalResponses, globalScore) {
+  async function exportCsv(stats, totalResponses, globalScore) {
     const rows = [
       ["Thématique", "Moyenne", "Réponses", "Répartition 1", "Répartition 2", "Répartition 3", "Répartition 4", "Répartition 5"],
     ];
@@ -366,12 +366,28 @@
     const csv = rows
       .map((row) => row.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(";"))
       .join("\r\n");
+    const filename = `audit-respect-${new Date().toISOString().slice(0, 10)}.csv`;
+
+    // Sandboxed preview environments (e.g. an embedded artifact) expose a
+    // `downloads` capability instead of allowing direct <a download> saves.
+    if (window.claude && typeof window.claude.use === "function") {
+      try {
+        const downloads = await window.claude.use("downloads");
+        if (downloads) {
+          await downloads.save({ filename, data: csv });
+          return;
+        }
+      } catch {
+        alert("L'export CSV n'est pas disponible dans cet aperçu. Ouvrez le prototype hébergé pour télécharger le fichier.");
+        return;
+      }
+    }
 
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `audit-respect-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.download = filename;
     document.body.appendChild(a);
     a.click();
     a.remove();
