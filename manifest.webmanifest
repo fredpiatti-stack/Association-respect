@@ -1,14 +1,14 @@
 {
-  "name": "Respect — Sas d'anonymisation",
-  "short_name": "Respect",
-  "description": "Prototype de l'audit interne anonyme : questionnaire salarié et tableau de bord auditeur verrouillé sous 5 réponses.",
+  "name": "RESPECT — Association",
+  "short_name": "RESPECT",
+  "description": "Association RESPECT : écoute, protection et soutien, et un outil d'audit interne anonyme pour les entreprises.",
   "start_url": "/index.html",
   "scope": "/",
   "id": "/index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#0a0a10",
-  "theme_color": "#0a0a10",
+  "background_color": "#2c3e50",
+  "theme_color": "#2c3e50",
   "lang": "fr",
   "icons": [
     {
