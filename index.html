@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plateforme d'Audit — Association Respect</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-header__brand">
+    <span class="app-header__mark" aria-hidden="true">◆</span>
+    <div>
+      <p class="app-header__title">Association Respect</p>
+      <p class="app-header__subtitle">Plateforme d'audit — prototype de démonstration</p>
+    </div>
+  </div>
+  <nav class="view-switch" role="tablist" aria-label="Choix de la vue">
+    <button type="button" class="view-switch__btn is-active" id="tab-employee" role="tab" aria-selected="true" aria-controls="view-employee">Vue salarié</button>
+    <button type="button" class="view-switch__btn" id="tab-auditor" role="tab" aria-selected="false" aria-controls="view-auditor">Vue auditeur</button>
+  </nav>
+</header>
+
+<main class="app-main">
+
+  <!-- ===================== VUE SALARIÉ ===================== -->
+  <section id="view-employee" class="view" role="tabpanel" aria-labelledby="tab-employee">
+
+    <div class="card card--intro" id="employee-intro">
+      <h2>Le sas d'anonymisation</h2>
+      <p>
+        Ce lien est unique et diffusé à l'ensemble de l'entreprise. En le suivant,
+        vous recevez un simple <strong>jeton de session</strong>, généré localement
+        dans votre navigateur. Votre identité, votre e-mail et votre adresse IP ne
+        sont jamais enregistrés — ni ici, ni sur aucun serveur.
+      </p>
+      <div class="token-badge">
+        <span class="token-badge__label">Jeton de session anonyme</span>
+        <code class="token-badge__value" id="session-token">…</code>
+      </div>
+      <button type="button" class="btn btn--primary" id="start-questionnaire">Commencer le questionnaire</button>
+    </div>
+
+    <form class="card card--form" id="employee-form" hidden novalidate>
+      <h2>Questionnaire d'audit</h2>
+      <p class="form-hint">Pour chaque affirmation, indiquez votre niveau d'accord de 1 (pas du tout d'accord) à 5 (tout à fait d'accord).</p>
+
+      <div id="question-list"></div>
+
+      <div class="field-group">
+        <label for="comment" class="field-group__label">Commentaire libre <span class="field-group__optional">(optionnel)</span></label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Vous pouvez ajouter un commentaire anonyme si vous le souhaitez…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary" id="submit-questionnaire">Envoyer ma réponse anonyme</button>
+    </form>
+
+    <div class="card card--confirm" id="employee-confirm" hidden>
+      <h2>Merci !</h2>
+      <p>Votre réponse a été enregistrée de façon anonyme. Aucune information permettant de vous identifier n'a été conservée.</p>
+      <button type="button" class="btn btn--secondary" id="restart-questionnaire">Simuler un nouvel employé (nouvel onglet recommandé)</button>
+    </div>
+
+  </section>
+
+  <!-- ===================== VUE AUDITEUR ===================== -->
+  <section id="view-auditor" class="view" role="tabpanel" aria-labelledby="tab-auditor" hidden>
+
+    <div class="card card--locked" id="auditor-locked">
+      <div class="lock-icon" aria-hidden="true">🔒</div>
+      <h2>Tableau de bord verrouillé</h2>
+      <p id="locked-count">0 / 5 réponses collectées</p>
+      <div class="progress-track">
+        <div class="progress-track__fill" id="progress-fill"></div>
+      </div>
+      <p class="form-hint">
+        Le tableau de bord se débloque uniquement à partir de 5 réponses collectées,
+        afin qu'aucun résultat individuel ne puisse être déduit des données agrégées.
+      </p>
+    </div>
+
+    <div class="auditor-dashboard" id="auditor-dashboard" hidden>
+
+      <div class="stat-row">
+        <div class="stat-tile">
+          <p class="stat-tile__label">Score global</p>
+          <p class="stat-tile__value" id="stat-global-score">–</p>
+          <p class="stat-tile__sub">moyenne des 5 thématiques, sur 5</p>
+        </div>
+        <div class="stat-tile">
+          <p class="stat-tile__label">Réponses collectées</p>
+          <p class="stat-tile__value" id="stat-response-count">–</p>
+          <p class="stat-tile__sub">réponses anonymes</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Score moyen par thématique</h2>
+        <div class="viz-root" id="chart-root">
+          <svg id="chart-svg" role="img" aria-labelledby="chart-title"></svg>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Tableau chiffré</h2>
+        <div class="table-scroll">
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th scope="col">Thématique</th>
+                <th scope="col">Moyenne</th>
+                <th scope="col">Réponses</th>
+                <th scope="col">Répartition (1→5)</th>
+              </tr>
+            </thead>
+            <tbody id="results-table-body"></tbody>
+          </table>
+        </div>
+        <button type="button" class="btn btn--secondary" id="export-csv">Exporter en CSV</button>
+      </div>
+
+    </div>
+
+    <button type="button" class="btn btn--ghost" id="reset-demo">Réinitialiser les données de démonstration</button>
+
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <p>
+    Version de démonstration : les mécanismes d'anonymisation et de verrouillage sont
+    fonctionnels, mais la mise en production réelle (hébergement, génération d'un lien
+    par entreprise, conformité RGPD complète) reste à construire.
+  </p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
