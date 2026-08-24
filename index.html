@@ -51,13 +51,35 @@
           <div class="acro-row"><span class="acro-L">C</span><span class="acro-dot">&middot;</span><span class="acro-W">Contre</span></div>
           <div class="acro-row"><span class="acro-L">T</span><span class="acro-dot">&middot;</span><span class="acro-W">la Toxicit&eacute;</span></div>
         </div>
-        <div class="stat-66">
-          <div class="num">66%</div>
-          <div class="txt">des personnes confront&eacute;es au harc&egrave;lement moral n'alertent personne.</div>
-          <div class="src">Enqu&ecirc;te HMAT, 2022&ndash;2024</div>
+        <div class="stat-group">
+          <div class="stat-66">
+            <div class="num">66%</div>
+            <div class="txt">des personnes confront&eacute;es au harc&egrave;lement moral n'alertent personne.</div>
+            <div class="src">Enqu&ecirc;te HMAT, 2022&ndash;2024</div>
+          </div>
+          <div class="stat-66">
+            <div class="num">35%</div>
+            <div class="txt">des salari&eacute;s d&eacute;clarent avoir d&eacute;j&agrave; &eacute;t&eacute; victimes de harc&egrave;lement au travail.</div>
+            <div class="src">Barom&egrave;tre Qualisocial x Ipsos, 2022</div>
+          </div>
+          <div class="stat-66">
+            <div class="num">3/10</div>
+            <div class="txt">salari&eacute;s sont aujourd'hui victimes de harc&egrave;lement moral au travail.</div>
+            <div class="src">Ipsos</div>
+          </div>
+          <div class="stat-66">
+            <div class="num">61%</div>
+            <div class="txt">des femmes actives ont endur&eacute; un environnement de travail comportant des plaisanteries &agrave; connotation sexuelle.</div>
+            <div class="src">IFOP pour le D&eacute;fenseur des droits</div>
+          </div>
+          <div class="stat-66">
+            <div class="num">23 ans</div>
+            <div class="txt">cette proportion de femmes concern&eacute;es par le harc&egrave;lement sexuel au travail n'a pas baiss&eacute; depuis 23 ans.</div>
+            <div class="src">IFOP pour le D&eacute;fenseur des droits</div>
+          </div>
         </div>
       </div>
-      <p class="hero-sub">Une <strong>porte d'entr&eacute;e bienveillante</strong> pour tout salari&eacute;&middot;e traversant une situation de harc&egrave;lement, de maltraitance ou de souffrance au travail. &Eacute;coute, orientation et accompagnement, en <strong>toute confidentialit&eacute;</strong>.</p>
+      <p class="hero-sub hero-sub--center">Une <strong>porte d'entr&eacute;e bienveillante</strong> pour tout salari&eacute;&middot;e traversant une situation de harc&egrave;lement, de maltraitance ou de souffrance au travail. &Eacute;coute, orientation et accompagnement, en <strong>toute confidentialit&eacute;</strong>.</p>
       <a class="btn btn-green" href="contact.html">Nous contacter</a>
       <a class="btn btn-outline" href="#benevoles">Devenir b&eacute;n&eacute;vole</a>
       <div class="wave-wrap"><svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg"><path class="wave-p" d="M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20"/></svg></div>
@@ -167,5 +189,23 @@
   </footer>
 
 </div></div>
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.acro-row'));
+  if (!rows.length) return;
+  var last = -1;
+  function tick() {
+    var idx;
+    do { idx = Math.floor(Math.random() * rows.length); } while (rows.length > 1 && idx === last);
+    last = idx;
+    var row = rows[idx];
+    row.classList.add('acro-pulse');
+    setTimeout(function () { row.classList.remove('acro-pulse'); }, 1000);
+  }
+  tick();
+  setInterval(tick, 1400);
+})();
+</script>
 </body>
 </html>
