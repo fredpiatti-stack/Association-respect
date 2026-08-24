@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outil d'audit anonyme — RESPECT</title>
-<meta name="description" content="Un lien unique, un jeton anonyme, un tableau de bord verrouillé sous 5 réponses. Prototype du sas d'anonymisation pour l'audit interne, par l'association RESPECT.">
+<title>Label &amp; Audit — R.E.S.P.E.C.T</title>
+<meta name="description" content="L'audit R.E.S.P.E.C.T : un audit interne anonyme pour identifier les signaux faibles, fiabiliser votre DUERP et obtenir le Label R.E.S.P.E.C.T. Prototype interactif du sas d'anonymisation.">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#2c3e50">
+<meta name="theme-color" content="#1a2e1e">
 <link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <meta name="mobile-web-app-capable" content="yes">
@@ -31,73 +31,102 @@
           <path d="M6 12.5c2-3 4-3 6 0s4 3 6 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
           <defs>
             <linearGradient id="markGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#2C3E50"/>
-              <stop offset="1" stop-color="#7A9E87"/>
+              <stop stop-color="#1A2E1E"/>
+              <stop offset="1" stop-color="#6DBF8A"/>
             </linearGradient>
           </defs>
         </svg>
       </span>
-      RESPECT
+      R.E.S.P.E.C.T
     </a>
     <nav class="nav__links" aria-label="Navigation principale">
-      <a href="index.html#mission">Notre mission</a>
-      <a href="#comment-ca-marche">Comment ça marche</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html">Notre mission</a>
+      <a href="chiffres.html">Les chiffres</a>
+      <a href="outil-audit.html">Label &amp; Audit</a>
+      <a href="benevoles.html">Bénévoles</a>
+      <a href="partenaires.html">Partenaires</a>
     </nav>
-    <a class="btn btn--primary btn--sm" href="#demo" id="nav-cta">Essayer la démo</a>
+    <a class="btn btn--primary btn--sm" href="contact.html">Contact</a>
   </div>
 </header>
 
 <main id="top">
 
   <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="hero__glow" aria-hidden="true"></div>
-    <div class="hero__inner">
-      <p class="eyebrow reveal">
-        <span class="eyebrow__dot" aria-hidden="true"></span>
-        Une action de l'association RESPECT
-      </p>
-      <h1 class="hero__title reveal">
-        L'audit interne,<br>
-        sans jamais savoir <span class="text-gradient">qui a répondu.</span>
-      </h1>
-      <p class="hero__subtitle reveal">
-        Un lien unique diffusé à toute l'entreprise. Chaque réponse est liée à un
-        jeton de session généré dans le navigateur — jamais à un nom, un e-mail
-        ou une adresse IP.
-      </p>
-      <div class="hero__cta reveal">
-        <a href="#demo" class="btn btn--primary btn--lg" id="hero-cta-demo">Essayer la démo <span aria-hidden="true">→</span></a>
-        <a href="#comment-ca-marche" class="btn btn--ghost btn--lg">Comment ça marche</a>
-      </div>
-
-      <div class="flow-card reveal" aria-hidden="true">
-        <div class="flow-step">
-          <span class="flow-step__icon">🔗</span>
-          <span class="flow-step__label">Lien unique</span>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <span class="flow-step__icon">🎫</span>
-          <span class="flow-step__label">Jeton anonyme</span>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <span class="flow-step__icon">📝</span>
-          <span class="flow-step__label">Réponse au questionnaire</span>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">
-          <span class="flow-step__icon">🔒</span>
-          <span class="flow-step__label">Dashboard verrouillé</span>
-        </div>
-      </div>
+  <section class="assoc-hero">
+    <svg class="assoc-hero__wave" viewBox="0 0 470 60" aria-hidden="true">
+      <path d="M10,30 Q35,5 60,30 T110,30 T160,30 T210,30 T260,30 T310,30 T360,30 T410,30 T460,30"/>
+    </svg>
+    <p class="eyebrow reveal" style="background:rgba(255,255,255,0.08); color:#fff; border-color:rgba(255,255,255,0.2);">
+      <span class="eyebrow__dot" aria-hidden="true" style="background:var(--sage);"></span>
+      Label &amp; Audit · Pour les dirigeants et responsables RH
+    </p>
+    <h1 class="assoc-hero__title reveal" style="font-size:clamp(30px,5vw,46px);">L'audit R.E.S.P.E.C.T : un actif<br>stratégique pour votre entreprise</h1>
+    <p class="assoc-hero__subtitle reveal">
+      Les entreprises les plus performantes sont celles qui savent voir ce
+      qui se joue vraiment dans leurs équipes. L'audit R.E.S.P.E.C.T vous
+      donne accès à cette intelligence humaine — et vous permet de la
+      transformer en levier de performance durable.
+    </p>
+    <div class="assoc-hero__cta reveal">
+      <a href="#demo" class="btn btn--gold btn--lg">Essayer la démo <span aria-hidden="true">→</span></a>
+      <a href="#comment-ca-marche" class="btn btn--on-dark btn--lg">Comment ça marche</a>
     </div>
   </section>
 
+  <div class="label-badge-row reveal">
+    <div class="l-badge"><span class="lr">R.</span><span class="ls">Labellisé</span></div>
+    <div>
+      <h3>Le Label R.E.S.P.E.C.T : un actif stratégique</h3>
+      <p>Un signal concret envoyé à vos équipes, candidats et partenaires : dans cette entreprise, la performance se construit avec les personnes, pas malgré elles.</p>
+    </div>
+  </div>
+
+  <!-- ===================== CE QUE L'AUDIT APPORTE ===================== -->
+  <section class="assoc-section" id="apporte">
+    <p class="assoc-section__eyebrow reveal">Ce que l'audit vous apporte</p>
+    <h2 class="assoc-section__title reveal">Une vision claire pour décider avec justesse</h2>
+    <p class="assoc-section__body reveal">
+      L'audit R.E.S.P.E.C.T vous offre quelque chose de rare : la vérité du
+      terrain, exprimée librement et anonymement par vos équipes.
+    </p>
+    <div class="values-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <article class="value-card reveal">
+        <span class="value-card__icon" aria-hidden="true">👁️</span>
+        <h3>Identifier les signaux faibles avant qu'ils deviennent des crises</h3>
+        <p>Tensions latentes, absentéisme naissant, perte de sens… L'audit les révèle au moment où ils sont encore simples à corriger.</p>
+      </article>
+      <article class="value-card reveal">
+        <span class="value-card__icon" aria-hidden="true">🤝</span>
+        <h3>Instaurer une confiance qui libère la performance</h3>
+        <p>Reconnaître qu'un collaborateur traverse une période difficile, c'est lui redonner confiance — et obtenir en retour un engagement renouvelé.</p>
+      </article>
+      <article class="value-card reveal">
+        <span class="value-card__icon" aria-hidden="true">📋</span>
+        <h3>Fiabiliser votre DUERP sur les risques psychosociaux</h3>
+        <p>L'audit vous fournit des données réelles et anonymes pour compléter votre Document Unique avec précision.</p>
+      </article>
+      <article class="value-card reveal">
+        <span class="value-card__icon" aria-hidden="true">🌿</span>
+        <h3>Ancrer votre démarche RSE dans des actes concrets</h3>
+        <p>Le label est une preuve tangible, auditée et reconnue de votre engagement envers vos collaborateurs.</p>
+      </article>
+    </div>
+    <div class="highlight-box reveal">
+      <p><strong>Un management inadapté n'est pas une faute — c'est souvent une information qui manque.</strong> L'audit vous donne cette information, pour que vous puissiez agir avec les bons leviers, au bon moment.</p>
+    </div>
+  </section>
+
+  <div class="platform-banner reveal">
+    <span class="platform-banner__icon" aria-hidden="true">💻</span>
+    <div>
+      <h3>Un audit 100&nbsp;% numérique, sécurisé et discret</h3>
+      <p>Tout se passe sur une plateforme sécurisée. Vos collaborateurs s'expriment librement, anonymement. Aucune réponse individuelle n'est identifiable.</p>
+    </div>
+  </div>
+
   <!-- ===================== TRUST BAR ===================== -->
-  <section class="trust-bar reveal" id="confidentialite-garanties" aria-label="Garanties de confidentialité">
+  <section class="trust-bar reveal" aria-label="Garanties de confidentialité">
     <div class="trust-bar__inner">
       <div class="trust-item">
         <span class="trust-item__icon">🕵️</span>
@@ -118,10 +147,48 @@
     </div>
   </section>
 
-  <!-- ===================== COMMENT ÇA MARCHE ===================== -->
-  <section class="section" id="comment-ca-marche">
+  <!-- ===================== PROCESSUS (5 étapes) ===================== -->
+  <section class="assoc-section" id="processus">
+    <p class="assoc-section__eyebrow reveal">Comment ça se passe ?</p>
+    <h2 class="assoc-section__title reveal">Un processus simple et adapté à votre réalité</h2>
+    <div class="steps-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <article class="step-card reveal">
+        <span class="step-card__num">01</span>
+        <h3>Un premier échange pour cerner votre contexte</h3>
+        <p>La démarche s'adapte à vous, pas l'inverse.</p>
+        <span class="step-tag">À votre initiative</span>
+      </article>
+      <article class="step-card reveal">
+        <span class="step-card__num">02</span>
+        <h3>Déploiement du questionnaire numérique</h3>
+        <p>Chaque collaborateur répond librement, anonymement, en 10 à 15 minutes.</p>
+        <span class="step-tag">Mise en place en 48h</span>
+      </article>
+      <article class="step-card reveal">
+        <span class="step-card__num">03</span>
+        <h3>Analyse et restitution pédagogique</h3>
+        <p>Un rapport clair, lisible et orienté action — points forts et zones d'attention.</p>
+        <span class="step-tag">Sous 3 semaines</span>
+      </article>
+      <article class="step-card reveal">
+        <span class="step-card__num">04</span>
+        <h3>Vous choisissez la suite</h3>
+        <p>Agir en interne, solliciter notre réseau, ou les deux — la décision vous appartient entièrement.</p>
+        <span class="step-tag">À votre rythme</span>
+      </article>
+      <article class="step-card reveal">
+        <span class="step-card__num">05</span>
+        <h3>Attribution du Label R.E.S.P.E.C.T</h3>
+        <p>Une reconnaissance qui se renouvelle et progresse dans le temps.</p>
+        <span class="step-tag">Valable 2 ans</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== ANONYMISATION (mécanisme technique) ===================== -->
+  <section class="assoc-section" id="comment-ca-marche" style="background:var(--surface-2);">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--muted">Comment ça marche</p>
+      <p class="eyebrow eyebrow--muted">Le mécanisme technique</p>
       <h2>Quatre étapes, zéro identité.</h2>
       <p class="section__subtitle">
         Le principe central du dispositif : personne — pas même l'auditeur —
@@ -152,8 +219,28 @@
     </div>
   </section>
 
+  <!-- ===================== L'ENTREPRISE QUE VOUS ÊTES ===================== -->
+  <section class="confidential-band">
+    <div class="assoc-section--tight reveal" style="max-width:1080px; margin:0 auto;">
+      <p class="assoc-section__eyebrow reveal" style="color:var(--olive);">L'entreprise que vous êtes</p>
+      <h2 class="assoc-section__title reveal" style="color:#fff;">Rejoindre les entreprises qui font de l'humain un atout</h2>
+      <p class="assoc-section__body reveal" style="color:rgba(255,255,255,0.82); font-family:var(--font-body);">
+        Prendre soin de ses équipes n'est pas un coût — c'est un
+        investissement à rendement documenté (voir <a href="chiffres.html" style="color:var(--sage);">nos chiffres sourcés</a>).
+      </p>
+      <div class="pills reveal">
+        <span class="pill">Prévention active des risques psychosociaux</span>
+        <span class="pill">DUERP fiabilisé et enrichi</span>
+        <span class="pill">Engagement RSE audité et reconnu</span>
+        <span class="pill">Performance durable par la confiance</span>
+        <span class="pill">Marque employeur différenciante</span>
+        <span class="pill">Culture de l'écoute et du respect</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== DEMO / PRODUCT ===================== -->
-  <section class="section section--demo" id="demo">
+  <section class="assoc-section assoc-section--demo" id="demo">
     <div class="section__header reveal">
       <p class="eyebrow eyebrow--muted">Prototype interactif</p>
       <h2>Testez le sas d'anonymisation</h2>
@@ -282,6 +369,15 @@
     </div>
   </section>
 
+  <section class="assoc-section assoc-section--center">
+    <p class="assoc-section__eyebrow reveal">Prêt·e à investir dans votre capital humain ?</p>
+    <h2 class="assoc-section__title reveal">Un échange suffit pour commencer</h2>
+    <p class="assoc-section__body reveal">Pas d'engagement immédiat. Une conversation pour voir si la démarche correspond à vos enjeux.</p>
+    <div class="assoc-hero__cta reveal" style="margin-top:20px;">
+      <a href="contact.html" class="btn btn--primary btn--lg">Prendre contact</a>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -294,13 +390,13 @@
             <path d="M6 12.5c2-3 4-3 6 0s4 3 6 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
             <defs>
               <linearGradient id="markGradFooter" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2C3E50"/>
-                <stop offset="1" stop-color="#7A9E87"/>
+                <stop stop-color="#1A2E1E"/>
+                <stop offset="1" stop-color="#6DBF8A"/>
               </linearGradient>
             </defs>
           </svg>
         </span>
-        RESPECT
+        R.E.S.P.E.C.T
       </a>
       <p>Le sas d'anonymisation pour des audits internes en toute confiance.</p>
     </div>
@@ -314,7 +410,7 @@
       <a href="confidentialite.html">Politique de confidentialité</a>
       <a href="cgu.html">Conditions générales d'utilisation</a>
     </nav>
-    <p class="footer__legal">© 2026 Association RESPECT — Prototype de démonstration, non destiné à un usage en production.</p>
+    <p class="footer__legal">© 2026 Association R.E.S.P.E.C.T — Prototype de démonstration, non destiné à un usage en production.</p>
   </div>
 </footer>
 
