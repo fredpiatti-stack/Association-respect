@@ -33,7 +33,6 @@
 
   <div class="tabs">
     <a class="tab" href="index.html">Notre mission</a>
-    <a class="tab" href="chiffres.html">La réalité des chiffres</a>
     <a class="tab active" href="audit.html">Audit</a>
     <a class="tab" href="label.html">Label</a>
     <a class="tab" href="contact.html">Contact</a>
@@ -57,6 +56,28 @@
       <div class="valeur"><div class="v-icon"><i class="ti ti-leaf"></i></div><div><h3>Poser la première pierre de votre démarche RSE</h3><p>Les résultats de l'audit constituent <strong>une base factuelle</strong> pour construire des actions concrètes envers vos collaborateurs.</p></div></div>
     </div>
     <div class="perf-bloc"><h3>Un management inadapté n'est pas une faute &mdash; c'est souvent une information qui manque.</h3><p>L'audit vous donne cette information &mdash; pour que vous puissiez agir avec les bons leviers, au bon moment.</p></div>
+  </div>
+
+  <div class="sec-dark">
+    <div class="sec-label sl-light">L'impact &eacute;conomique</div>
+    <div class="sec-h2-light">Ce que les chiffres<br>disent &agrave; l'entreprise</div>
+    <p class="body-light" style="margin-bottom:1.1rem;">Ne pas voir un collaborateur qui souffre, c'est perdre sa confiance &mdash; et se priver d'un travail optimis&eacute;. Les donn&eacute;es &eacute;conomiques confirment ce que le bon sens sugg&egrave;re.</p>
+    <div class="cout-grid">
+      <div class="cout-card"><div class="cnum">120 Md&euro;</div><p>co&ucirc;t total de l'absent&eacute;isme pour les entreprises fran&ccedil;aises chaque ann&eacute;e</p><div class="csrc">Barom&egrave;tre Absent&eacute;isme Malakoff Humanis, 2025</div></div>
+      <div class="cout-card"><div class="cnum">3 500&ndash;4 700&euro;</div><p>co&ucirc;t moyen d'un salari&eacute; absent (direct + indirect) par an</p><div class="csrc">AYMING / Institut Sapiens</div></div>
+      <div class="cout-card"><div class="cnum">4,5%</div><p>taux d'absent&eacute;isme moyen en France en 2024 &mdash; un record historique</p><div class="csrc">Ayming, 17e barom&egrave;tre, 2025</div></div>
+      <div class="cout-card"><div class="cnum">2&ndash;3 Md&euro;</div><p>co&ucirc;t social estim&eacute; du stress au travail pour la soci&eacute;t&eacute; fran&ccedil;aise</p><div class="csrc">INRS / Arts et M&eacute;tiers ParisTech</div></div>
+      <div class="cout-card"><div class="cnum">10 Md&euro;</div><p>perte annuelle pour l'&eacute;conomie fran&ccedil;aise li&eacute;e au burn-out (arr&ecirc;ts, d&eacute;sorganisation, perte de productivit&eacute;)</p><div class="csrc">Barom&egrave;tre du burn-out, Moodwork, 2024</div></div>
+      <div class="cout-card"><div class="cnum">14 840&euro;</div><p>co&ucirc;t moyen du d&eacute;sengagement d'un salari&eacute; par an (absent&eacute;isme, perte de productivit&eacute;, turnover)</p><div class="csrc">IBET, Mozart Consulting / Apicil, 2024</div></div>
+      <div class="cout-card"><div class="cnum">+21%</div><p>de rentabilit&eacute; dans les &eacute;quipes &agrave; fort engagement</p><div class="csrc">Gallup, State of the Global Workplace</div></div>
+      <div class="cout-card"><div class="cnum">+17%</div><p>de productivit&eacute; dans les &eacute;quipes &agrave; fort engagement</p><div class="csrc">Gallup, State of the Global Workplace</div></div>
+    </div>
+  </div>
+  <div class="conclu">
+    <p>&laquo; Agir t&ocirc;t co&ucirc;te infiniment moins cher qu'agir tard &mdash; ou ne pas agir du tout. &raquo;</p>
+    <div class="conclu-item"><i class="ti ti-arrow-right"></i>Le salaire maintenu par l'employeur pendant un arr&ecirc;t n'est rembours&eacute; que partiellement et avec d&eacute;lai par la S&eacute;curit&eacute; sociale (m&eacute;canisme de subrogation) &mdash; le co&ucirc;t r&eacute;el d&eacute;passe largement le seul salaire vers&eacute;.</div>
+    <div class="conclu-item"><i class="ti ti-arrow-right"></i>Un salari&eacute; qui se sent respect&eacute; travaille mieux, s'absente moins, reste plus longtemps.</div>
+    <div class="conclu-item"><i class="ti ti-arrow-right"></i>R.E.S.P.E.C.T vous donne les outils pour transformer ces donn&eacute;es en actions concr&egrave;tes.</div>
   </div>
 
   <div class="platform"><div class="p-icon"><i class="ti ti-device-laptop"></i></div><div><h3>Un audit 100 % numérique, sécurisé et discret</h3><p>Tout se passe sur une plateforme sécurisée. Vos collaborateurs s'expriment librement, anonymement. Aucune réponse individuelle n'est identifiable.</p></div></div>
@@ -102,5 +123,23 @@
     </div>
   </footer>
 
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = Array.prototype.slice.call(document.querySelectorAll('.cout-card .cnum'));
+  if (!els.length) return;
+  var last = -1;
+  function tick() {
+    var idx;
+    do { idx = Math.floor(Math.random() * els.length); } while (els.length > 1 && idx === last);
+    last = idx;
+    var el = els[idx];
+    el.classList.add('stat-pulse');
+    setTimeout(function () { el.classList.remove('stat-pulse'); }, 900);
+  }
+  tick();
+  setInterval(tick, 1800);
+})();
+</script>
 </body>
 </html>
