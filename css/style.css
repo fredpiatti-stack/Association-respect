@@ -1788,14 +1788,42 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
 
 @keyframes rsite-dw { to { stroke-dashoffset: 0; } }
 
-/* Desktop shell: center the card on a neutral page background instead of
-   letting it stay pinned to the left edge at full viewport width. */
+/* Full-width layout: sections stay edge-to-edge across the whole page,
+   while their content is centered and capped at a comfortable reading
+   width via responsive left/right padding (no extra wrapper markup). */
 body:has(.rsite) { background: #F2F5F0; }
-.rsite-shell { display: flex; justify-content: center; padding: 32px 16px; background: #F2F5F0; }
-.rsite { width: 100%; box-shadow: 0 20px 60px -20px rgba(26,46,30,0.25); border-radius: 14px; }
-@media (max-width: 680px) {
-  .rsite-shell { padding: 0; }
-  .rsite { box-shadow: none; border-radius: 0; }
+.rsite-shell { display: block; }
+.rsite {
+  --edge: max(1.75rem, calc((100% - 1180px) / 2));
+  max-width: none;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.rsite .nav { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .tabs { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .sub-tabs { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .hero { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .label-hero { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .sec { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .sec-alt { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .sec-dark { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .mission-band { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .label-badge-row { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .platform { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .conclu { padding-left: var(--edge); padding-right: var(--edge); }
+.rsite .footer { padding-left: var(--edge); padding-right: var(--edge); }
+
+/* Hero identity block and grids get a little more breathing room once
+   the column is wider than the original mobile-card design. */
+@media (min-width: 900px) {
+  .rsite .acro-66 { max-width: 640px; }
+  .rsite .hero-sub { max-width: 520px; }
+  .rsite .grid2 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .rsite .big-stats { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .rsite .cout-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .rsite .contact-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 
