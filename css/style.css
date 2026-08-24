@@ -1840,4 +1840,10 @@ body:has(.rsite) { background: #F2F5F0; }
   filter: brightness(1.3) drop-shadow(0 0 10px currentColor);
 }
 
+/* Give the "impact économique" figures more visual weight — they carry
+   the core B2B argument and shouldn't read smaller than the other stats. */
+.rsite .cout-card { padding: 1.3rem 1rem; }
+.rsite .cout-card .cnum { font-size: 2rem; margin-bottom: 0.5rem; }
+.rsite .cout-card p { font-size: 0.73rem; }
+
 
