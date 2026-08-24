@@ -1,4 +1,4 @@
-const CACHE_NAME = "respect-v4";
+const CACHE_NAME = "respect-v5";
 const CORE_ASSETS = [
   "/index.html",
   "/chiffres.html",
