@@ -1610,15 +1610,25 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   .rsite .acro-col { }
   .rsite .acro-row { display: flex; align-items: baseline; gap: 0.65rem; padding: 0.22rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.06); }
   .rsite .acro-row:last-child { border-bottom: none; }
-  .rsite .acro-L { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6DBF8A; width: 1.1rem; flex-shrink: 0; }
+  .rsite .acro-L { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 600; color: #6DBF8A; width: 1.5rem; flex-shrink: 0; transition: font-weight 0.4s ease, text-shadow 0.4s ease, color 0.4s ease; }
   .rsite .acro-dot { font-size: 0.6rem; color: #9aaa40; opacity: 0.8; flex-shrink: 0; }
-  .rsite .acro-W { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: #E4EDE5; }
+  .rsite .acro-W { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #E4EDE5; transition: font-weight 0.4s ease, text-shadow 0.4s ease, color 0.4s ease; }
+  .rsite .acro-row.acro-pulse .acro-L { font-weight: 800; color: #9be8b8; text-shadow: 0 0 16px rgba(109,191,138,0.9); }
+  .rsite .acro-row.acro-pulse .acro-W { font-weight: 700; color: #ffffff; text-shadow: 0 0 14px rgba(228,237,229,0.7); }
   .rsite .stat-66 { display: flex; flex-direction: column; justify-content: center; background: rgba(109,191,138,0.08); border: 0.5px solid rgba(109,191,138,0.3); border-radius: 10px; padding: 1.1rem; }
   .rsite .stat-66 .num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: #6DBF8A; line-height: 1; margin-bottom: 0.5rem; }
   .rsite .stat-66 .txt { font-size: 0.78rem; font-weight: 600; color: #E4EDE5; line-height: 1.55; margin-bottom: 0.5rem; }
   .rsite .stat-66 .src { font-size: 0.62rem; color: #4a7052; font-style: italic; }
+  .rsite .stat-group { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .rsite .stat-group .stat-66 { padding: 0.8rem; }
+  .rsite .stat-group .stat-66 .num { font-size: 1.8rem; margin-bottom: 0.3rem; }
+  .rsite .stat-group .stat-66 .txt { font-size: 0.68rem; margin-bottom: 0.3rem; }
+  @media (max-width: 480px) {
+    .rsite .stat-group { grid-template-columns: 1fr; }
+  }
   .rsite .hero-sub { font-size: 0.85rem; line-height: 1.85; color: #7aab82; margin-bottom: 1.5rem; max-width: 440px; }
   .rsite .hero-sub strong { color: #6DBF8A; font-weight: 400; }
+  .rsite .hero-sub--center { text-align: center; margin-left: auto; margin-right: auto; }
   .rsite .wave-wrap { margin-top: 1.5rem; opacity: 0.18; }
   .rsite .wave-p { stroke: #6DBF8A; stroke-width: 1.5; fill: none; stroke-dasharray: 800; stroke-dashoffset: 800; animation: rsite-dw 2.5s ease forwards 0.3s; }
 
@@ -1818,8 +1828,8 @@ body:has(.rsite) { background: #F2F5F0; }
 /* Hero identity block and grids get a little more breathing room once
    the column is wider than the original mobile-card design. */
 @media (min-width: 900px) {
-  .rsite .acro-66 { max-width: 640px; }
-  .rsite .hero-sub { max-width: 520px; }
+  .rsite .acro-66 { max-width: 760px; }
+  .rsite .hero-sub { max-width: 600px; }
   .rsite .grid2 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .rsite .big-stats { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .rsite .cout-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
