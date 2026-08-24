@@ -1606,8 +1606,8 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   /* HERO */
   .rsite .hero { background: #1A2E1E; padding: 2.25rem 1.75rem 1.75rem; }
   .rsite .eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6DBF8A; margin-bottom: 1rem; }
-  .rsite .acro-66 { display: flex; flex-direction: column; align-items: center; gap: 1.75rem; margin-bottom: 1.75rem; }
-  .rsite .acro-col { display: inline-flex; flex-direction: column; }
+  .rsite .acro-66 { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 1.75rem 2.5rem; margin-bottom: 1.75rem; }
+  .rsite .acro-col { display: inline-flex; flex-direction: column; flex: 1 1 340px; }
   .rsite .acro-row { display: flex; align-items: baseline; gap: 0.9rem; padding: 0.3rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.06); }
   .rsite .acro-row:last-child { border-bottom: none; }
   .rsite .acro-L { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 600; color: #6DBF8A; width: 2rem; flex-shrink: 0; transition: font-weight 0.4s ease, text-shadow 0.4s ease, color 0.4s ease; }
@@ -1616,8 +1616,9 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   .rsite .acro-row.acro-pulse .acro-L { font-weight: 800; color: #9be8b8; text-shadow: 0 0 16px rgba(109,191,138,0.9); }
   .rsite .acro-row.acro-pulse .acro-W { font-weight: 700; color: #ffffff; text-shadow: 0 0 14px rgba(228,237,229,0.7); }
 
-  /* Stat bubbles: round badges that flow freely, not a rigid card grid */
-  .rsite .stat-bubbles { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.3rem 1.6rem; }
+  /* Stat bubbles: round badges that flow freely, not a rigid card grid.
+     Sit opposite the acronym, in the space to its right. */
+  .rsite .stat-bubbles { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.3rem 1.6rem; flex: 1 1 320px; }
   .rsite .stat-bubble { display: flex; flex-direction: column; align-items: center; text-align: center; width: 116px; }
   .rsite .bubble-circle { width: 100px; height: 100px; border-radius: 50%; background: rgba(109,191,138,0.1); border: 1px solid rgba(109,191,138,0.35); display: flex; align-items: center; justify-content: center; margin-bottom: 0.55rem; }
   .rsite .bubble-circle .num { font-family: 'Playfair Display', serif; font-weight: 700; color: #6DBF8A; font-size: 1.35rem; line-height: 1; }
@@ -1829,7 +1830,7 @@ body:has(.rsite) { background: #F2F5F0; }
 /* Hero identity block and grids get a little more breathing room once
    the column is wider than the original mobile-card design. */
 @media (min-width: 900px) {
-  .rsite .acro-66 { max-width: 760px; margin-left: auto; margin-right: auto; }
+  .rsite .acro-66 { max-width: 980px; margin-left: auto; margin-right: auto; }
   .rsite .hero-sub { max-width: 600px; }
   .rsite .grid2 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .rsite .big-stats { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
