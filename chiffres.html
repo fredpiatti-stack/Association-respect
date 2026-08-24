@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La réalité des chiffres — R.E.S.P.E.C.T</title>
-<meta name="description" content="Des chiffres sourcés (DARES, INRS, IFOP, Malakoff Humanis, Empreinte Humaine, Gallup) pour comprendre l'ampleur de la souffrance au travail et son coût pour les entreprises.">
+<meta name="description" content="Statistiques vérifiées et sourcées sur le harcèlement, le mal-être au travail et leur coût pour les entreprises : DARES, IFOP, Ipsos, Malakoff Humanis, Gallup, INRS.">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#1a2e1e">
 <link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
@@ -15,296 +15,161 @@
 <meta name="apple-mobile-web-app-title" content="R.E.S.P.E.C.T">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="rsite-shell"><div class="rsite">
 
-<a class="skip-link" href="#ampleur">Aller au contenu</a>
-
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a class="nav__brand" href="index.html">
-      <span class="nav__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2 22 7v6c0 6-4.2 9.4-10 11-5.8-1.6-10-5-10-11V7z" fill="url(#markGrad)"/>
-          <path d="M6 12.5c2-3 4-3 6 0s4 3 6 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-          <defs>
-            <linearGradient id="markGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#1A2E1E"/>
-              <stop offset="1" stop-color="#6DBF8A"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      R.E.S.P.E.C.T
-    </a>
-    <nav class="nav__links" aria-label="Navigation principale">
-      <a href="index.html">Notre mission</a>
-      <a href="chiffres.html">Les chiffres</a>
-      <a href="outil-audit.html">Label &amp; Audit</a>
-      <a href="benevoles.html">Bénévoles</a>
-      <a href="partenaires.html">Partenaires</a>
-    </nav>
-    <a class="btn btn--primary btn--sm" href="contact.html">Contact</a>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ===================== HERO ===================== -->
-  <section class="assoc-hero">
-    <svg class="assoc-hero__wave" viewBox="0 0 470 60" aria-hidden="true">
-      <path d="M10,30 Q35,5 60,30 T110,30 T160,30 T210,30 T260,30 T310,30 T360,30 T410,30 T460,30"/>
-    </svg>
-    <p class="eyebrow reveal" style="background:rgba(255,255,255,0.08); color:#fff; border-color:rgba(255,255,255,0.2);">
-      <span class="eyebrow__dot" aria-hidden="true" style="background:var(--sage);"></span>
-      La réalité des chiffres
-    </p>
-    <h1 class="assoc-hero__title reveal" style="font-size:clamp(30px,5vw,46px);">Ce que les données révèlent<br>sur la souffrance au travail</h1>
-    <p class="assoc-hero__subtitle reveal">
-      Des chiffres sourcés pour comprendre l'ampleur d'un phénomène encore
-      trop souvent tu — et agir avec lucidité. Chaque donnée est accompagnée
-      de sa source.
-    </p>
-  </section>
-
-  <nav class="pills reveal" style="max-width:1080px; margin:32px auto 0; padding:0 24px; justify-content:center;" aria-label="Sections de la page">
-    <a class="pill" href="#ampleur" style="text-decoration:none;">L'ampleur</a>
-    <a class="pill" href="#silence" style="text-decoration:none;">Le silence</a>
-    <a class="pill" href="#management" style="text-decoration:none;">La réalité du management</a>
-    <a class="pill" href="#economique" style="text-decoration:none;">L'impact économique</a>
+  <nav class="nav">
+    <div class="nav-logo"><span class="g">R</span>.<span class="g">E</span>.<span class="g">S</span>.<span class="g">P</span>.<span class="g">E</span>.<span class="g">C</span>.<span class="g">T</span></div>
+    <div class="nav-links">
+            <a class="nav-btn active" href="index.html">L'association</a>
+      <a class="nav-btn" href="outil-audit.html">Label & Audit</a>
+      <a class="nav-btn" href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <!-- ===================== AMPLEUR ===================== -->
-  <section class="assoc-section" id="ampleur">
-    <p class="assoc-section__eyebrow reveal">En France, aujourd'hui</p>
-    <h2 class="assoc-section__title reveal">Une réalité plus répandue qu'on ne le croit</h2>
-    <p class="assoc-section__body reveal">
-      La souffrance au travail ne touche pas une minorité. Elle traverse
-      toutes les entreprises, tous les secteurs, tous les niveaux
-      hiérarchiques.
-    </p>
-    <div class="big-stats-grid">
-      <div class="big-stat-card reveal">
-        <div class="num">42%</div>
-        <p>des salariés se sont vu prescrire au moins un arrêt de travail en 2024.</p>
-        <p class="stat-source">Baromètre Absentéisme, Malakoff Humanis, 2024</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num">33%</div>
-        <p>des salariés sont en burn-out, dont 12 % en burn-out sévère.</p>
-        <p class="stat-source">13ᵉ Baromètre Empreinte Humaine / OpinionWay, sept. 2024</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num gold">1/3</div>
-        <p>des salariés déclare avoir connu au moins une situation de harcèlement au travail en 2022.</p>
-        <p class="stat-source">Baromètre Qualisocial x Ipsos, 2022</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num gold">1/5</div>
-        <p>des femmes affirme avoir été victime de harcèlement moral dans son environnement professionnel.</p>
-        <p class="stat-source">DARES, 2023</p>
-      </div>
-    </div>
-
-    <p class="assoc-section__eyebrow reveal" style="margin-top:48px;">Harcèlement sexuel</p>
-    <h2 class="assoc-section__title reveal">Une réalité encore sous-estimée</h2>
-    <div class="big-stats-grid">
-      <div class="big-stat-card reveal">
-        <div class="num">32%</div>
-        <p>des femmes actives ont été confrontées à une situation de harcèlement sexuel au sens juridique, au moins une fois dans leur carrière.</p>
-        <p class="stat-source">IFOP pour le Défenseur des droits</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num gold">22% → 32%</div>
-        <p>l'écart entre les femmes qui <em>pensent</em> avoir vécu du harcèlement sexuel au travail et celles qui en ont réellement vécu au sens juridique.</p>
-        <p class="stat-source">IFOP pour le Défenseur des droits</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num">75%</div>
-        <p>des femmes concernées rapportent des gestes ou propos à connotation sexuelle répétés malgré leur absence de consentement.</p>
-        <p class="stat-source">IFOP pour le Défenseur des droits</p>
-      </div>
-      <div class="big-stat-card reveal">
-        <div class="num gold">48%</div>
-        <p>des salariés se déclarent en détresse psychologique (symptômes de dépression et d'épuisement).</p>
-        <p class="stat-source">Empreinte Humaine / OpinionWay, 2024</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SILENCE ===================== -->
-  <section class="assoc-section" id="silence" style="background:var(--surface-2);">
-    <p class="assoc-section__eyebrow reveal">Ce qui reste invisible</p>
-    <h2 class="assoc-section__title reveal">La souffrance se tait. Et c'est là le vrai problème.</h2>
-    <p class="assoc-section__body reveal">
-      La majorité des salarié·es en difficulté n'en parlent pas à leur
-      employeur. Par crainte, par honte, par peur des conséquences. Ce
-      silence empêche toute aide — et laisse les situations se dégrader
-      seules.
-    </p>
-    <div class="silence-block reveal">
-      <h3>Ce que les données révèlent sur ce qui ne se dit pas</h3>
-      <p>Ces chiffres illustrent l'écart entre ce que vivent les équipes et ce que perçoit l'organisation.</p>
-      <div class="silence-item">
-        <div class="si-num">30%+</div>
-        <div>
-          <p>des personnes harcelées moralement n'en parlent à personne.</p>
-          <p class="si-src">DARES, 2023</p>
-        </div>
-      </div>
-      <div class="silence-item">
-        <div class="si-num">-20%</div>
-        <div>
-          <p>seulement engagent une démarche officielle après avoir subi du harcèlement moral.</p>
-          <p class="si-src">DARES, 2023</p>
-        </div>
-      </div>
-      <div class="silence-item">
-        <div class="si-num">8/10</div>
-        <div>
-          <p>des salariés en détresse psychologique estiment que ce sentiment est relié au moins partiellement au travail.</p>
-          <p class="si-src">Empreinte Humaine / OpinionWay, 2024</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== MANAGEMENT ===================== -->
-  <section class="assoc-section" id="management">
-    <p class="assoc-section__eyebrow reveal">La réalité du management</p>
-    <h2 class="assoc-section__title reveal">Le mal-être naît rarement d'une mauvaise intention</h2>
-    <p class="assoc-section__body reveal">
-      Les situations de souffrance sont trop souvent associées à des
-      comportements intentionnellement nuisibles. La réalité est plus
-      nuancée — et c'est précisément ce qui rend l'information si précieuse
-      pour les entreprises.
-    </p>
-    <div style="margin-top: 24px;">
-      <div class="stat-line reveal">
-        <div class="stat-line__body">
-          <h4>Affections de santé mentale, 2ᵉ cause d'arrêt de travail</h4>
-          <div class="bar-outer"><div class="bar-inner" style="width:15%;"></div></div>
-          <p>Les troubles psychiques représentent une part croissante des arrêts de travail en France.</p>
-        </div>
-        <div class="stat-line__pct">~15%</div>
-      </div>
-    </div>
-    <div class="highlight-box reveal">
-      <p>Un manager peut générer une situation de mal-être <strong>sans en avoir la moindre conscience</strong> — par surcharge transmise, par pression du contexte, par manque d'outils ou de signaux. <strong>Identifier ces zones de tension n'est pas une mise en cause : c'est une information précieuse</strong> que la plupart des dirigeants n'ont tout simplement pas accès à obtenir autrement.</p>
-    </div>
-  </section>
-
-  <!-- ===================== ÉCONOMIQUE ===================== -->
-  <section class="confidential-band" id="economique" style="padding: 88px 24px;">
-    <div class="assoc-section--tight" style="max-width:1080px; margin:0 auto;">
-      <p class="assoc-section__eyebrow reveal" style="color:var(--olive);">L'impact économique</p>
-      <h2 class="assoc-section__title reveal" style="color:#fff;">Ce que les chiffres disent à l'entreprise</h2>
-      <p class="assoc-section__body reveal" style="color:rgba(255,255,255,0.82); font-family:var(--font-body);">
-        Ne pas voir un collaborateur qui souffre, ce n'est pas neutre : c'est
-        un coût direct, mesurable, et documenté par des organismes de
-        référence — au-delà du coût humain, difficile à chiffrer.
-      </p>
-
-      <div class="cost-grid">
-        <div class="cost-card reveal">
-          <div class="cnum">110-120 Md€</div>
-          <p>coût total de l'absentéisme pour les entreprises françaises chaque année (coûts directs + indirects)</p>
-        </div>
-        <div class="cost-card reveal">
-          <div class="cnum">3 500-4 700 €</div>
-          <p>coût moyen d'un salarié absent par an (maintien de salaire, remplacement, désorganisation)</p>
-        </div>
-        <div class="cost-card reveal">
-          <div class="cnum">6,7%</div>
-          <p>taux d'absentéisme moyen en France en 2024 — un niveau élevé</p>
-        </div>
-        <div class="cost-card reveal">
-          <div class="cnum">1,9-6 Md€</div>
-          <p>coût du stress et des risques psychosociaux pour les entreprises françaises, selon les estimations</p>
-        </div>
-        <div class="cost-card reveal">
-          <div class="cnum">+23%</div>
-          <p>de rentabilité pour les équipes dans le quartile le plus engagé</p>
-        </div>
-        <div class="cost-card reveal">
-          <div class="cnum">+14%</div>
-          <p>de productivité pour les équipes les plus engagées</p>
-        </div>
-      </div>
-
-      <div class="highlight-box reveal" style="background:rgba(109,191,138,0.12); border-color: var(--sage); margin-top:32px;">
-        <p style="color:#fff;">
-          Concrètement, pendant un arrêt de travail, l'employeur continue
-          souvent de verser le salaire (maintien de salaire par
-          subrogation), avant d'être remboursé — partiellement et avec
-          délai — par les indemnités journalières de la Sécurité sociale.
-          <strong>Le coût réel dépasse largement le seul salaire</strong> :
-          désorganisation de l'équipe, remplacement, perte de
-          productivité, et risque de rechute ou d'arrêt prolongé si la
-          cause n'est pas traitée.
-        </p>
-      </div>
-
-      <p class="stat-source reveal" style="margin-top:28px; color:rgba(255,255,255,0.55); text-align:center;">
-        Sources : WTW (2024/2025), Ayming &amp; Institut Sapiens, Baromètre
-        Absentéisme Malakoff Humanis (2024), INRS, Gallup — State of the
-        Global Workplace. Les estimations de coût total varient selon la
-        méthodologie (secteur, périmètre direct/indirect) ; les fourchettes
-        ci-dessus reflètent cette variation plutôt qu'un chiffre unique.
-      </p>
-    </div>
-  </section>
-
-  <section class="assoc-section assoc-section--center">
-    <p class="assoc-section__eyebrow reveal">En résumé</p>
-    <h2 class="assoc-section__title reveal">Agir tôt coûte infiniment moins cher qu'agir tard</h2>
-    <p class="assoc-section__body reveal">
-      Un salarié qui se sent respecté travaille mieux, s'absente moins, reste
-      plus longtemps. La prévention est un investissement à rendement
-      documenté.
-    </p>
-    <div class="assoc-hero__cta reveal" style="margin-top: 24px;">
-      <a href="outil-audit.html" class="btn btn--primary btn--lg">Découvrir l'audit R.E.S.P.E.C.T</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__brand">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__mark" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2 22 7v6c0 6-4.2 9.4-10 11-5.8-1.6-10-5-10-11V7z" fill="url(#markGradFooter)"/>
-            <path d="M6 12.5c2-3 4-3 6 0s4 3 6 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-            <defs>
-              <linearGradient id="markGradFooter" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#1A2E1E"/>
-                <stop offset="1" stop-color="#6DBF8A"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-        R.E.S.P.E.C.T
-      </a>
-      <p>Réseau d'Écoute et de Soutien et de Protection des Employé·es Contre la Toxicité.</p>
-    </div>
-    <p class="footer__disclaimer">
-      Version de démonstration. Chaque chiffre est sourcé ; certaines
-      estimations varient selon la méthodologie des études citées.
-    </p>
-    <nav class="footer__links" aria-label="Liens légaux">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Politique de confidentialité</a>
-      <a href="cgu.html">Conditions générales d'utilisation</a>
-    </nav>
-    <p class="footer__legal">© 2026 Association R.E.S.P.E.C.T — Loi 1901 · Site de démonstration.</p>
+  <div class="tabs">
+        <a class="tab" href="index.html">Notre mission</a>
+    <a class="tab active" href="chiffres.html">La réalité des chiffres</a>
+    <a class="tab" href="outil-audit.html">Label & Audit</a>
+    <a class="tab" href="benevoles.html">Devenir bénévole</a>
+    <a class="tab" href="partenaires.html">Partenaires</a>
+    <a class="tab" href="contact.html">Contact</a>
   </div>
-</footer>
 
-<script src="js/site.js"></script>
+  <div class="hero">
+      <div class="eyebrow">La r&eacute;alit&eacute; des chiffres</div>
+      <div class="sec-h2-light" style="font-size:1.45rem;margin-bottom:0.85rem;">Ce que les donn&eacute;es<br>r&eacute;v&egrave;lent sur la souffrance au travail</div>
+      <p class="body-light">Des chiffres sourc&eacute;s pour comprendre l'ampleur d'un ph&eacute;nom&egrave;ne encore trop souvent tu &mdash; et agir avec lucidit&eacute;.</p>
+      <div class="wave-wrap"><svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg"><path class="wave-p" d="M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20"/></svg></div>
+    </div>
+
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="goSub('ampleur')">L'ampleur</button>
+      <button class="sub-tab" onclick="goSub('silence')">Le silence</button>
+      <button class="sub-tab" onclick="goSub('management')">La r&eacute;alit&eacute; du management</button>
+      <button class="sub-tab" onclick="goSub('economique')">L'impact &eacute;conomique</button>
+    </div>
+
+    <!-- AMPLEUR -->
+    <div class="subpage active" id="sp-ampleur">
+      <div class="sec">
+        <div class="sec-label sl-green">En France, aujourd'hui</div>
+        <div class="sec-h2">Une r&eacute;alit&eacute; plus r&eacute;pandue<br>qu'on ne le croit</div>
+        <p class="body">La souffrance au travail ne touche pas une minorit&eacute;. Elle traverse toutes les entreprises, tous les secteurs, tous les niveaux hi&eacute;rarchiques.</p>
+        <div class="big-stats">
+          <div class="big-stat"><div class="num">35%</div><p>des salari&eacute;s d&eacute;clarent avoir d&eacute;j&agrave; &eacute;t&eacute; victimes de harc&egrave;lement au travail</p><div class="source">Barom&egrave;tre Qualisocial x Ipsos, 2022</div></div>
+          <div class="big-stat"><div class="num">3/10</div><p>salari&eacute;s sont aujourd'hui victimes de harc&egrave;lement moral au travail</p><div class="source">Ipsos</div></div>
+          <div class="big-stat"><div class="num amber">68%</div><p>des situations de harc&egrave;lement rapport&eacute;es rel&egrave;vent du harc&egrave;lement moral (art. L. 1152-1 du code du travail)</p><div class="source">Qualisocial x Ipsos, 2022</div></div>
+          <div class="big-stat"><div class="num amber">43%</div><p>des arr&ecirc;ts de travail sont d&eacute;sormais li&eacute;s, en tout ou partie, &agrave; un motif psychologique</p><div class="source">Ipsos, 2024</div></div>
+        </div>
+      </div>
+      <div class="sec-alt">
+        <div class="sec-label sl-lime">Harc&egrave;lement sexuel &amp; discrimination</div>
+        <div class="sec-h2">Des situations encore sous-estim&eacute;es</div>
+        <div class="big-stats">
+          <div class="big-stat"><div class="num">1/5</div><p>des femmes actives ont d&ucirc; faire face &agrave; une situation de harc&egrave;lement sexuel au cours de leur carri&egrave;re</p><div class="source">IFOP pour le D&eacute;fenseur des droits</div></div>
+          <div class="big-stat"><div class="num amber">75%</div><p>des femmes concern&eacute;es rapportent des gestes ou propos &agrave; connotation sexuelle r&eacute;p&eacute;t&eacute;s malgr&eacute; leur absence de consentement</p><div class="source">IFOP pour le D&eacute;fenseur des droits</div></div>
+          <div class="big-stat"><div class="num">61%</div><p>des femmes actives ont endur&eacute; un environnement de travail comportant des plaisanteries &agrave; connotation sexuelle</p><div class="source">IFOP pour le D&eacute;fenseur des droits</div></div>
+          <div class="big-stat"><div class="num amber">23 ans</div><p>cette proportion de femmes concern&eacute;es par le harc&egrave;lement sexuel au travail n'a pas baiss&eacute; depuis 23 ans</p><div class="source">IFOP pour le D&eacute;fenseur des droits</div></div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="sec-label sl-green">Ce que r&eacute;v&egrave;le le barom&egrave;tre</div>
+        <div class="sec-h2">Une gravit&eacute; de plus en plus reconnue</div>
+        <div style="margin-top:1rem;">
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>Consid&egrave;rent les situations de harc&egrave;lement comme r&eacute;pandues dans le monde du travail</h4><div class="bar-outer"><div class="bar-inner" style="width:74%;"></div></div><p>Une large majorit&eacute; des salari&eacute;s per&ccedil;oit le ph&eacute;nom&egrave;ne comme fr&eacute;quent, pas marginal.</p></div><div class="bar-pct">74%</div></div>
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>Estiment que ces situations sont de plus en plus fr&eacute;quentes</h4><div class="bar-outer"><div class="bar-inner" style="width:62%;"></div></div><p>Le sentiment d'aggravation domine, ann&eacute;e apr&egrave;s ann&eacute;e.</p></div><div class="bar-pct">62%</div></div>
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>En font un enjeu prioritaire pour l'entreprise</h4><div class="bar-outer"><div class="bar-inner amber" style="width:54%;"></div></div><p>Plus de la moiti&eacute; des salari&eacute;s attend une action concr&egrave;te de leur employeur.</p></div><div class="bar-pct amber">54%</div></div>
+        </div>
+        <div class="mgmt-highlight" style="margin-top:1rem;">
+          <p>Ces trois indicateurs convergent : le harc&egrave;lement au travail n'est plus per&ccedil;u comme un sujet marginal, mais comme <strong>un enjeu de gestion &agrave; part enti&egrave;re</strong>, que les entreprises ne peuvent plus ignorer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SILENCE -->
+    <div class="subpage" id="sp-silence">
+      <div class="sec">
+        <div class="sec-label sl-green">Ce qui reste invisible</div>
+        <div class="sec-h2">La souffrance se tait.<br>Et c'est l&agrave; le vrai probl&egrave;me.</div>
+        <p class="body">La majorit&eacute; des salari&eacute;&middot;es en difficult&eacute; n'en parlent pas &agrave; leur employeur. Par crainte, par honte, par peur des cons&eacute;quences. Ce silence emp&ecirc;che toute aide &mdash; et laisse les situations se d&eacute;grader seules.</p>
+        <div class="silence-bloc">
+          <h3>Ce que les donn&eacute;es r&eacute;v&egrave;lent sur ce qui ne se dit pas</h3>
+          <p>Ces chiffres illustrent l'&eacute;cart entre ce que vivent les &eacute;quipes et ce que per&ccedil;oit l'organisation.</p>
+          <div class="silence-item"><div class="si-num">66%</div><div><p>des personnes confront&eacute;es au harc&egrave;lement moral n'alertent personne &mdash; ni direction, ni repr&eacute;sentants du personnel, ni m&eacute;decin du travail.</p><div class="si-src">Enqu&ecirc;te HMAT, 2022&ndash;2024</div></div></div>
+          <div class="silence-item"><div class="si-num">48%</div><div><p>des salari&eacute;s se d&eacute;clarent en d&eacute;tresse psychologique (sympt&ocirc;mes de d&eacute;pression et d'&eacute;puisement), sans toujours l'exprimer &agrave; leur entourage professionnel.</p><div class="si-src">Empreinte Humaine / OpinionWay, 2024</div></div></div>
+          <div class="silence-item"><div class="si-num">34%</div><div><p>seulement des situations de harc&egrave;lement sont port&eacute;es &agrave; la connaissance de l'employeur &mdash; les deux tiers restent donc invisibles pour l'entreprise.</p><div class="si-src">Qualisocial x Ipsos, 2022</div></div></div>
+          <div class="silence-item"><div class="si-num">43%</div><div><p>des arr&ecirc;ts de travail sont li&eacute;s &agrave; un motif psychologique, rarement exprim&eacute; comme tel au moment de la prescription.</p><div class="si-src">Ipsos, 2024</div></div></div>
+        </div>
+      </div>
+      <div class="conclu">
+        <p>&laquo; Ces personnes n'attendent pas forc&eacute;ment une solution imm&eacute;diate. Elles attendent d'&ecirc;tre entendues. R.E.S.P.E.C.T existe pour leur ouvrir cet espace. &raquo;</p>
+        <div class="conclu-item"><i class="ti ti-arrow-right"></i>Un salari&eacute; qui se sent vu et entendu s'absente moins et reste plus longtemps.</div>
+        <div class="conclu-item"><i class="ti ti-arrow-right"></i>Briser le silence, c'est d&eacute;j&agrave; commencer &agrave; agir.</div>
+      </div>
+    </div>
+
+    <!-- MANAGEMENT -->
+    <div class="subpage" id="sp-management">
+      <div class="sec">
+        <div class="sec-label sl-green">La r&eacute;alit&eacute; du management</div>
+        <div class="sec-h2">Le mal-&ecirc;tre na&icirc;t rarement<br>d'une mauvaise intention</div>
+        <p class="body">Les situations de souffrance sont trop souvent associ&eacute;es &agrave; des comportements intentionnellement nuisibles. La r&eacute;alit&eacute; des donn&eacute;es raconte une autre histoire &mdash; et c'est pr&eacute;cis&eacute;ment ce qui rend l'information si pr&eacute;cieuse.</p>
+        <div style="margin-top:1rem;">
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>Engagement des managers en baisse dans le monde</h4><div class="bar-outer"><div class="bar-inner" style="width:22%;"></div></div><p>Seuls 22% des managers se d&eacute;clarent engag&eacute;s dans leur travail, contre 27% un an plus t&ocirc;t &mdash; 9 points perdus depuis 2022.</p></div><div class="bar-pct">22%</div></div>
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>Engagement des salari&eacute;s au plus bas depuis 2020</h4><div class="bar-outer"><div class="bar-inner" style="width:20%;"></div></div><p>L'engagement recule pour la 2e ann&eacute;e cons&eacute;cutive dans le monde, faute d'un encadrement adapt&eacute;.</p></div><div class="bar-pct">20%</div></div>
+          <div class="stat-line"><div class="sl-bar-wrap"><h4>Arr&ecirc;ts de travail li&eacute;s &agrave; un motif psychologique</h4><div class="bar-outer"><div class="bar-inner amber" style="width:43%;"></div></div><p>Parmi les actifs ayant connu un arr&ecirc;t sur 12 mois, 43% le lient en tout ou partie &agrave; un motif psychologique.</p></div><div class="bar-pct amber">43%</div></div>
+        </div>
+        <div class="mgmt-highlight">
+          <p>Un manager peut g&eacute;n&eacute;rer une situation de mal-&ecirc;tre <strong>sans en avoir la moindre conscience</strong> &mdash; par surcharge transmise, par pression du contexte, par manque d'outils ou de signaux. Les maladies professionnelles li&eacute;es aux troubles psychosociaux ont &eacute;t&eacute; multipli&eacute;es par plus de deux entre 2019 et 2023 (+117%, Assurance Maladie). <strong>Identifier ces zones de tension n'est pas une mise en cause : c'est une information pr&eacute;cieuse</strong> que la plupart des dirigeants n'ont tout simplement pas acc&egrave;s &agrave; obtenir autrement.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- &Eacute;CONOMIQUE -->
+    <div class="subpage" id="sp-economique">
+      <div class="sec-dark">
+        <div class="sec-label sl-light">L'impact &eacute;conomique</div>
+        <div class="sec-h2-light">Ce que les chiffres<br>disent &agrave; l'entreprise</div>
+        <p class="body-light" style="margin-bottom:1.1rem;">Ne pas voir un collaborateur qui souffre, c'est perdre sa confiance &mdash; et se priver d'un travail optimis&eacute;. Les donn&eacute;es &eacute;conomiques confirment ce que le bon sens sugg&egrave;re.</p>
+        <div class="cout-grid">
+          <div class="cout-card"><div class="cnum">120 Md&euro;</div><p>co&ucirc;t total de l'absent&eacute;isme pour les entreprises fran&ccedil;aises chaque ann&eacute;e</p><div class="csrc">Barom&egrave;tre Absent&eacute;isme Malakoff Humanis, 2025</div></div>
+          <div class="cout-card"><div class="cnum">3 500&ndash;4 700&euro;</div><p>co&ucirc;t moyen d'un salari&eacute; absent (direct + indirect) par an</p><div class="csrc">AYMING / Institut Sapiens</div></div>
+          <div class="cout-card"><div class="cnum">4,5%</div><p>taux d'absent&eacute;isme moyen en France en 2024 &mdash; un record historique</p><div class="csrc">Ayming, 17e barom&egrave;tre, 2025</div></div>
+          <div class="cout-card"><div class="cnum">2&ndash;3 Md&euro;</div><p>co&ucirc;t social estim&eacute; du stress au travail pour la soci&eacute;t&eacute; fran&ccedil;aise</p><div class="csrc">INRS / Arts et M&eacute;tiers ParisTech</div></div>
+          <div class="cout-card"><div class="cnum">+21%</div><p>de rentabilit&eacute; dans les &eacute;quipes &agrave; fort engagement</p><div class="csrc">Gallup, State of the Global Workplace</div></div>
+          <div class="cout-card"><div class="cnum">+17%</div><p>de productivit&eacute; dans les &eacute;quipes &agrave; fort engagement</p><div class="csrc">Gallup, State of the Global Workplace</div></div>
+        </div>
+      </div>
+      <div class="conclu">
+        <p>&laquo; Agir t&ocirc;t co&ucirc;te infiniment moins cher qu'agir tard &mdash; ou ne pas agir du tout. &raquo;</p>
+        <div class="conclu-item"><i class="ti ti-arrow-right"></i>Le salaire maintenu par l'employeur pendant un arr&ecirc;t n'est rembours&eacute; que partiellement et avec d&eacute;lai par la S&eacute;curit&eacute; sociale (m&eacute;canisme de subrogation) &mdash; le co&ucirc;t r&eacute;el d&eacute;passe largement le seul salaire vers&eacute;.</div>
+        <div class="conclu-item"><i class="ti ti-arrow-right"></i>Un salari&eacute; qui se sent respect&eacute; travaille mieux, s'absente moins, reste plus longtemps.</div>
+        <div class="conclu-item"><i class="ti ti-arrow-right"></i>R.E.S.P.E.C.T vous donne les outils pour transformer ces donn&eacute;es en actions concr&egrave;tes.</div>
+      </div>
+    </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Association R.E.S.P.E.C.T &middot; Loi 1901</p>
+    <div class="footer-logo">R&middot;E&middot;S&middot;P&middot;E&middot;C&middot;T</div>
+  </footer>
+
+</div></div>
+<script>
+const subPages = ['ampleur','silence','management','economique'];
+function goSub(name) {
+  document.querySelectorAll('.subpage').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+  const sp = document.getElementById('sp-' + name);
+  if (sp) sp.classList.add('active');
+  const si = subPages.indexOf(name);
+  const subTabs = document.querySelectorAll('.sub-tab');
+  if (subTabs[si]) subTabs[si].classList.add('active');
+}
+</script>
 </body>
 </html>
