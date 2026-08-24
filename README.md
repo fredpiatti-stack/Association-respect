@@ -6,17 +6,16 @@ de Soutien et de Protection des Employé·es Contre la Toxicité).
 Pages principales :
 
 - `index.html` — mission de l'association, valeurs, diagnostic des
-  situations couvertes, accompagnement, et sections **Devenir bénévole** /
-  **Devenir partenaire**
-- `chiffres.html` — statistiques sourcées sur le harcèlement et le mal-être
-  au travail, dont l'impact économique pour les entreprises
-- `audit.html` — présentation de l'audit R.E.S.P.E.C.T pour les entreprises
+  situations couvertes, statistiques sur l'ampleur du problème,
+  accompagnement, et sections **Devenir bénévole** / **Devenir partenaire**
+- `audit.html` — présentation de l'audit R.E.S.P.E.C.T pour les entreprises,
+  dont les statistiques sur l'impact économique du mal-être au travail
 - `label.html` — présentation du Label R.E.S.P.E.C.T
 - `contact.html` — coordonnées
 
-`outil-audit.html`, `benevoles.html` et `partenaires.html` sont conservés
-comme redirections vers leur nouvel emplacement, pour ne pas casser
-d'anciens liens.
+`outil-audit.html`, `benevoles.html`, `partenaires.html` et `chiffres.html`
+sont conservés comme redirections vers leur nouvel emplacement, pour ne pas
+casser d'anciens liens.
 
 ## Lancer le site
 
