@@ -1619,9 +1619,9 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   /* Stat bubbles: round badges that flow freely, not a rigid card grid.
      Sit opposite the acronym, in the space to its right. */
   .rsite .stat-bubbles { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.3rem 1.6rem; flex: 1 1 320px; }
-  .rsite .stat-bubble { display: flex; flex-direction: column; align-items: center; text-align: center; width: 116px; }
-  .rsite .bubble-circle { width: 100px; height: 100px; border-radius: 50%; background: rgba(109,191,138,0.1); border: 1px solid rgba(109,191,138,0.35); display: flex; align-items: center; justify-content: center; margin-bottom: 0.55rem; }
-  .rsite .bubble-circle .num { font-family: 'Playfair Display', serif; font-weight: 700; color: #6DBF8A; font-size: 1.35rem; line-height: 1; }
+  .rsite .stat-bubble { display: flex; flex-direction: column; align-items: center; text-align: center; width: 136px; }
+  .rsite .bubble-circle { width: 120px; height: 120px; border-radius: 50%; background: rgba(109,191,138,0.1); border: 1px solid rgba(109,191,138,0.35); display: flex; align-items: center; justify-content: center; margin-bottom: 0.55rem; }
+  .rsite .bubble-circle .num { font-family: 'Playfair Display', serif; font-weight: 700; color: #6DBF8A; font-size: 1.6rem; line-height: 1; }
   .rsite .stat-bubble--lg { width: 148px; }
   .rsite .stat-bubble--lg .bubble-circle { width: 138px; height: 138px; background: rgba(109,191,138,0.16); }
   .rsite .stat-bubble--lg .bubble-circle .num { font-size: 2rem; }
