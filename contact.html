@@ -45,11 +45,65 @@
     </div>
     <div class="sec"><div class="sec-label sl-green">Coordonn&eacute;es</div><div class="sec-h2">Nous sommes &agrave; votre &eacute;coute</div><div class="contact-grid"><div class="c-item"><i class="ti ti-mail"></i><div><div class="ci-label">Email g&eacute;n&eacute;ral</div><div class="ci-val">contact@asso-respect.com</div></div></div><div class="c-item"><i class="ti ti-phone"></i><div><div class="ci-label">T&eacute;l&eacute;phone</div><div class="ci-val">07 67 52 51 60</div></div></div><div class="c-item"><i class="ti ti-building"></i><div><div class="ci-label">Label entreprises</div><div class="ci-val">label@asso-respect.com</div></div></div><div class="c-item"><i class="ti ti-users"></i><div><div class="ci-label">B&eacute;n&eacute;voles &amp; partenaires</div><div class="ci-val">rejoindre@asso-respect.com</div></div></div></div><div class="reassurance"><i class="ti ti-lock"></i><p>Vos &eacute;changes sont strictement confidentiels. Aucune information ne sera transmise sans votre accord &eacute;crit et &eacute;clair&eacute;.</p></div></div>
 
+    <div class="sec-alt">
+      <div class="sec-label sl-lime">&Ecirc;tre recontact&eacute;&middot;e</div>
+      <div class="sec-h2">Laissez-nous un message, nous revenons vers vous</div>
+      <form class="r-form" id="contact-form">
+        <div class="r-row2">
+          <div><label for="cf-nom">Nom</label><input type="text" id="cf-nom" name="nom" placeholder="Votre nom" required></div>
+          <div><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" placeholder="vous@exemple.com" required></div>
+        </div>
+        <div>
+          <label for="cf-motif">Je vous contacte en tant que</label>
+          <select id="cf-motif" name="motif">
+            <option value="Salari&eacute;&middot;e en difficult&eacute;">Salari&eacute;&middot;e en difficult&eacute;</option>
+            <option value="Entreprise &mdash; Audit">Entreprise &mdash; Audit</option>
+            <option value="Entreprise &mdash; Label">Entreprise &mdash; Label</option>
+            <option value="Futur&middot;e b&eacute;n&eacute;vole">Futur&middot;e b&eacute;n&eacute;vole</option>
+            <option value="Futur&middot;e partenaire">Futur&middot;e partenaire</option>
+            <option value="Autre demande">Autre demande</option>
+          </select>
+        </div>
+        <div><label for="cf-message">Message</label><textarea id="cf-message" name="message" placeholder="Votre message..." required></textarea></div>
+        <label class="r-check"><input type="checkbox" id="cf-consent" required><span>J'accepte que mes donn&eacute;es soient trait&eacute;es conform&eacute;ment &agrave; la <a href="confidentialite.html" style="color:#3A7050;">politique de confidentialit&eacute;</a>. Aucune information ne sera transmise sans mon accord explicite.</span></label>
+        <button type="submit" class="btn btn-green" style="align-self:flex-start;">Envoyer le message</button>
+        <p class="r-note">En cliquant sur envoyer, votre messagerie s'ouvre avec ce message pr&eacute;-rempli, pr&ecirc;t &agrave; nous &ecirc;tre adress&eacute;.</p>
+      </form>
+    </div>
+
   <footer class="footer">
     <p>&copy; 2026 Association R.E.S.P.E.C.T &middot; Loi 1901</p>
     <div class="footer-logo">R&middot;E&middot;S&middot;P&middot;E&middot;C&middot;T</div>
   </footer>
 
 </div></div>
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var routes = {
+    "Salarié·e en difficulté": "contact@asso-respect.com",
+    "Entreprise — Audit": "contact@asso-respect.com",
+    "Entreprise — Label": "label@asso-respect.com",
+    "Futur·e bénévole": "rejoindre@asso-respect.com",
+    "Futur·e partenaire": "rejoindre@asso-respect.com",
+    "Autre demande": "contact@asso-respect.com"
+  };
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nom = document.getElementById('cf-nom').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var motif = document.getElementById('cf-motif').value;
+    var message = document.getElementById('cf-message').value.trim();
+    var to = routes[motif] || 'contact@asso-respect.com';
+    var subject = 'Site R.E.S.P.E.C.T — ' + motif;
+    var body = 'Nom : ' + nom + '\nEmail : ' + email + '\n\n' + message;
+    var mailto = 'mailto:' + to
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+})();
+</script>
 </body>
 </html>
