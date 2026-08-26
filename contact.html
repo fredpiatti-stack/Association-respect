@@ -43,7 +43,7 @@
       <div class="sec-h2-light" style="font-size:1.4rem;margin-bottom:0.75rem;">Parler, c'est d&eacute;j&agrave; agir</div>
       <p class="body-light">Toutes les prises de contact sont trait&eacute;es avec la plus stricte confidentialit&eacute;. Il n'y a pas de petite souffrance.</p>
     </div>
-    <div class="sec"><div class="sec-label sl-green">Coordonn&eacute;es</div><div class="sec-h2">Nous sommes &agrave; votre &eacute;coute</div><div class="contact-grid"><div class="c-item"><i class="ti ti-mail"></i><div><div class="ci-label">Email g&eacute;n&eacute;ral</div><div class="ci-val">contact@asso-respect.com</div></div></div><div class="c-item"><i class="ti ti-phone"></i><div><div class="ci-label">T&eacute;l&eacute;phone</div><div class="ci-val">07 67 52 51 60</div></div></div><div class="c-item"><i class="ti ti-building"></i><div><div class="ci-label">Label entreprises</div><div class="ci-val">label@asso-respect.com</div></div></div><div class="c-item"><i class="ti ti-users"></i><div><div class="ci-label">B&eacute;n&eacute;voles &amp; partenaires</div><div class="ci-val">rejoindre@asso-respect.com</div></div></div></div><div class="reassurance"><i class="ti ti-lock"></i><p>Vos &eacute;changes sont strictement confidentiels. Aucune information ne sera transmise sans votre accord &eacute;crit et &eacute;clair&eacute;.</p></div></div>
+    <div class="sec"><div class="sec-label sl-green">Coordonn&eacute;es</div><div class="sec-h2">Nous sommes &agrave; votre &eacute;coute</div><div class="contact-grid"><div class="c-item"><i class="ti ti-mail"></i><div><div class="ci-label">Email g&eacute;n&eacute;ral</div><div class="ci-val">contact@asso-respect.fr</div></div></div><div class="c-item"><i class="ti ti-phone"></i><div><div class="ci-label">T&eacute;l&eacute;phone</div><div class="ci-val">07 67 52 51 60</div></div></div><div class="c-item"><i class="ti ti-building"></i><div><div class="ci-label">Label entreprises</div><div class="ci-val">label@asso-respect.fr</div></div></div><div class="c-item"><i class="ti ti-users"></i><div><div class="ci-label">B&eacute;n&eacute;voles &amp; partenaires</div><div class="ci-val">rejoindre@asso-respect.fr</div></div></div></div><div class="reassurance"><i class="ti ti-lock"></i><p>Vos &eacute;changes sont strictement confidentiels. Aucune information ne sera transmise sans votre accord &eacute;crit et &eacute;clair&eacute;.</p></div></div>
 
     <div class="sec-alt">
       <div class="sec-label sl-lime">&Ecirc;tre recontact&eacute;&middot;e</div>
@@ -82,12 +82,12 @@
   var form = document.getElementById('contact-form');
   if (!form) return;
   var routes = {
-    "Salarié·e en difficulté": "contact@asso-respect.com",
-    "Entreprise — Audit": "contact@asso-respect.com",
-    "Entreprise — Label": "label@asso-respect.com",
-    "Futur·e bénévole": "rejoindre@asso-respect.com",
-    "Futur·e partenaire": "rejoindre@asso-respect.com",
-    "Autre demande": "contact@asso-respect.com"
+    "Salarié·e en difficulté": "contact@asso-respect.fr",
+    "Entreprise — Audit": "contact@asso-respect.fr",
+    "Entreprise — Label": "label@asso-respect.fr",
+    "Futur·e bénévole": "rejoindre@asso-respect.fr",
+    "Futur·e partenaire": "rejoindre@asso-respect.fr",
+    "Autre demande": "contact@asso-respect.fr"
   };
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -95,7 +95,7 @@
     var email = document.getElementById('cf-email').value.trim();
     var motif = document.getElementById('cf-motif').value;
     var message = document.getElementById('cf-message').value.trim();
-    var to = routes[motif] || 'contact@asso-respect.com';
+    var to = routes[motif] || 'contact@asso-respect.fr';
     var subject = 'Site R.E.S.P.E.C.T — ' + motif;
     var body = 'Nom : ' + nom + '\nEmail : ' + email + '\n\n' + message;
     var mailto = 'mailto:' + to
