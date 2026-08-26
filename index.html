@@ -255,7 +255,7 @@
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var rows = Array.prototype.slice.call(document.querySelectorAll('.acro-row'));
-  var stats = Array.prototype.slice.call(document.querySelectorAll('.big-stat .num, .silence-item .si-num, .stat-line .bar-pct'));
+  var stats = Array.prototype.slice.call(document.querySelectorAll('.big-stat .num, .silence-item .si-num, .stat-line .bar-pct, .stat-bubbles .bubble-circle .num'));
   if (!rows.length && !stats.length) return;
   var lastRow = -1;
   var lastStat = -1;

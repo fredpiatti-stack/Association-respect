@@ -1843,7 +1843,8 @@ body:has(.rsite) { background: #F2F5F0; }
 .rsite .big-stat .num,
 .rsite .silence-item .si-num,
 .rsite .stat-line .bar-pct,
-.rsite .cout-card .cnum {
+.rsite .cout-card .cnum,
+.rsite .stat-bubbles .bubble-circle .num {
   display: inline-block;
   transition: transform 0.45s ease, filter 0.45s ease;
 }
