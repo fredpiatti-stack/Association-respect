@@ -83,6 +83,7 @@
         <div>
           <label>Cr&eacute;neau souhait&eacute; <span style="font-weight:400;color:#7a8a76;">&mdash; matin&eacute;es, 8h30 &agrave; 12h</span></label>
           <div class="r-slots" id="cb-slots"></div>
+          <button type="button" class="r-more" id="cb-more">+ Voir d'autres cr&eacute;neaux</button>
         </div>
         <label class="r-check">
           <input type="checkbox" id="cb-evening">
@@ -141,25 +142,41 @@
     return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()];
   }
 
-  var slotDates = [];
+  var BATCH_SIZE = 6;
+  var MAX_SLOTS = 36; // roughly six weeks of weekdays, covers "even a month out"
   var cursor = new Date();
   cursor.setDate(cursor.getDate() + 1);
-  while (slotDates.length < 6) {
-    if (cursor.getDay() !== 0) slotDates.push(new Date(cursor));
-    cursor.setDate(cursor.getDate() + 1);
+  var slotCount = 0;
+  var moreBtn = document.getElementById('cb-more');
+
+  function addBatch() {
+    var added = 0;
+    while (added < BATCH_SIZE && slotCount < MAX_SLOTS) {
+      if (cursor.getDay() !== 0) {
+        (function (d) {
+          var el = document.createElement('span');
+          el.className = 'r-slot' + (slotCount === 0 ? ' active' : '');
+          el.textContent = label(d) + ' · 8h30–12h';
+          el.dataset.label = label(d) + ' · 8h30–12h';
+          el.addEventListener('click', function () {
+            slotsEl.querySelectorAll('.r-slot').forEach(function (o) { o.classList.remove('active'); });
+            el.classList.add('active');
+          });
+          slotsEl.appendChild(el);
+        })(new Date(cursor));
+        slotCount++;
+        added++;
+      }
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    if (slotCount >= MAX_SLOTS) {
+      moreBtn.disabled = true;
+      moreBtn.textContent = 'Au-delà, contactez-nous directement par téléphone ou par e-mail';
+    }
   }
 
-  slotDates.forEach(function (d, i) {
-    var el = document.createElement('span');
-    el.className = 'r-slot' + (i === 0 ? ' active' : '');
-    el.textContent = label(d) + ' · 8h30–12h';
-    el.dataset.label = label(d) + ' · 8h30–12h';
-    el.addEventListener('click', function () {
-      slotsEl.querySelectorAll('.r-slot').forEach(function (o) { o.classList.remove('active'); });
-      el.classList.add('active');
-    });
-    slotsEl.appendChild(el);
-  });
+  addBatch();
+  moreBtn.addEventListener('click', addBatch);
 
   var eveningCheck = document.getElementById('cb-evening');
   var eveningNote = document.getElementById('cb-evening-note');
