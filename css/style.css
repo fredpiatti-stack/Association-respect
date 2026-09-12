@@ -1800,6 +1800,13 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   .rsite .r-form .r-check input { width: auto; margin-top: 2px; }
   .rsite .r-form .r-note { font-size: 0.65rem; color: #7a8a76; margin: 0; }
   .rsite .r-form .r-sent { display: none; margin-top: 0.5rem; font-size: 0.75rem; color: #2C5E40; }
+  .rsite .r-slots { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .rsite .r-slot { font-size: 0.68rem; padding: 0.4rem 0.7rem; border-radius: 20px; border: 0.5px solid #3A7050; color: #3A7050; background: rgba(58,112,80,0.08); cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+  .rsite .r-slot:hover { background: rgba(58,112,80,0.16); }
+  .rsite .r-slot.active { background: #3A7050; color: #fff; }
+  .rsite .r-slots.disabled { opacity: 0.4; pointer-events: none; }
+  .rsite .r-more { margin-top: 0.55rem; font-size: 0.68rem; color: #3A7050; background: none; border: none; padding: 0; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif; }
+  .rsite .r-more:disabled { color: #a8b8a4; cursor: default; text-decoration: none; }
 
   /* CONCLU CHIFFRES */
   .rsite .conclu { background: #3A7050; padding: 1.5rem 1.75rem; }

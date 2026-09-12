@@ -71,6 +71,40 @@
       </form>
     </div>
 
+    <div class="sec">
+      <div class="sec-label sl-green">Rendez-vous t&eacute;l&eacute;phonique</div>
+      <div class="sec-h2">On vous rappelle, &agrave; l'heure qui vous convient</div>
+      <p class="body">Choisissez un cr&eacute;neau &mdash; un membre de l'&eacute;quipe vous appellera pour un premier &eacute;change confidentiel.</p>
+      <form class="r-form" id="callback-form">
+        <div class="r-row2">
+          <div><label for="cb-prenom">Pr&eacute;nom (facultatif)</label><input type="text" id="cb-prenom" placeholder="Facultatif"></div>
+          <div><label for="cb-tel">T&eacute;l&eacute;phone</label><input type="tel" id="cb-tel" placeholder="06 12 34 56 78" required></div>
+        </div>
+        <div>
+          <label>Cr&eacute;neau souhait&eacute; <span style="font-weight:400;color:#7a8a76;">&mdash; matin&eacute;es, 8h30 &agrave; 12h</span></label>
+          <div class="r-slots" id="cb-slots"></div>
+          <button type="button" class="r-more" id="cb-more">+ Voir d'autres cr&eacute;neaux</button>
+        </div>
+        <label class="r-check">
+          <input type="checkbox" id="cb-evening">
+          <span>Je ne suis disponible qu'en fin de journ&eacute;e, en dehors de ces horaires.</span>
+        </label>
+        <div class="reassurance" id="cb-evening-note" style="display:none;">
+          <i class="ti ti-clock"></i>
+          <p><strong>Pas de souci.</strong> Pr&eacute;cisez vos disponibilit&eacute;s ci-dessous&nbsp;: l'&eacute;quipe reviendra vers vous avec une proposition de cr&eacute;neau adapt&eacute;e.</p>
+        </div>
+        <div class="r-row2">
+          <div><label for="cb-contexte">Contexte (facultatif)</label><textarea id="cb-contexte" placeholder="Quelques mots sur votre situation, si vous souhaitez les partager avant l'appel."></textarea></div>
+          <div><label for="cb-dispo">Disponibilit&eacute;s (facultatif)</label><textarea id="cb-dispo" placeholder="Ex&nbsp;: &eacute;viter avant 9h, dispo aussi mardi en fin de journ&eacute;e..."></textarea></div>
+        </div>
+        <div class="reassurance"><i class="ti ti-message"></i><p><strong>Confirmation.</strong> Vous recevrez uniquement un SMS de confirmation au num&eacute;ro indiqu&eacute;, sans e-mail, pour pr&eacute;server votre anonymat.</p></div>
+        <div class="reassurance"><i class="ti ti-lock"></i><p><strong>Appel confidentiel.</strong> Le num&eacute;ro affich&eacute; sera celui de l'association. Vous pouvez demander &agrave; ce qu'aucun message ne soit laiss&eacute; si vous ne d&eacute;crochez pas.</p></div>
+        <label class="r-check"><input type="checkbox" id="cb-consent" required><span>J'accepte d'&ecirc;tre contact&eacute;&middot;e par t&eacute;l&eacute;phone au num&eacute;ro indiqu&eacute;, uniquement pour ce rendez-vous.</span></label>
+        <button type="submit" class="btn btn-green" style="align-self:flex-start;">Confirmer le rendez-vous</button>
+        <p class="r-note">En cliquant sur confirmer, votre messagerie s'ouvre avec la demande pr&eacute;-remplie, pr&ecirc;te &agrave; nous &ecirc;tre adress&eacute;e.</p>
+      </form>
+    </div>
+
   <footer class="footer">
     <p>&copy; 2026 Association R.E.S.P.E.C.T &middot; Loi 1901</p>
     <div class="footer-logo">R&middot;E&middot;S&middot;P&middot;E&middot;C&middot;T</div>
@@ -93,6 +127,89 @@
     var mailto = 'mailto:' + to
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+})();
+(function () {
+  var slotsEl = document.getElementById('cb-slots');
+  var form = document.getElementById('callback-form');
+  if (!slotsEl || !form) return;
+
+  var DAYS = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+  var MONTHS = ['jan', 'fév', 'mars', 'avr', 'mai', 'juin', 'juil', 'août', 'sept', 'oct', 'nov', 'déc'];
+
+  function label(d) {
+    return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()];
+  }
+
+  var BATCH_SIZE = 6;
+  var MAX_SLOTS = 36; // roughly six weeks of weekdays, covers "even a month out"
+  var cursor = new Date();
+  cursor.setDate(cursor.getDate() + 1);
+  var slotCount = 0;
+  var moreBtn = document.getElementById('cb-more');
+
+  function addBatch() {
+    var added = 0;
+    while (added < BATCH_SIZE && slotCount < MAX_SLOTS) {
+      if (cursor.getDay() !== 0) {
+        (function (d) {
+          var el = document.createElement('span');
+          el.className = 'r-slot' + (slotCount === 0 ? ' active' : '');
+          el.textContent = label(d) + ' · 8h30–12h';
+          el.dataset.label = label(d) + ' · 8h30–12h';
+          el.addEventListener('click', function () {
+            slotsEl.querySelectorAll('.r-slot').forEach(function (o) { o.classList.remove('active'); });
+            el.classList.add('active');
+          });
+          slotsEl.appendChild(el);
+        })(new Date(cursor));
+        slotCount++;
+        added++;
+      }
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    if (slotCount >= MAX_SLOTS) {
+      moreBtn.disabled = true;
+      moreBtn.textContent = 'Au-delà, contactez-nous directement par téléphone ou par e-mail';
+    }
+  }
+
+  addBatch();
+  moreBtn.addEventListener('click', addBatch);
+
+  var eveningCheck = document.getElementById('cb-evening');
+  var eveningNote = document.getElementById('cb-evening-note');
+  var dispoField = document.getElementById('cb-dispo');
+  eveningCheck.addEventListener('change', function () {
+    eveningNote.style.display = this.checked ? 'flex' : 'none';
+    slotsEl.classList.toggle('disabled', this.checked);
+    dispoField.placeholder = this.checked
+      ? 'Précisez vos disponibilités en fin de journée (ex : après 18h, un soir en particulier...).'
+      : 'Ex : éviter avant 9h, dispo aussi mardi en fin de journée...';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var prenom = document.getElementById('cb-prenom').value.trim();
+    var tel = document.getElementById('cb-tel').value.trim();
+    var creneau = eveningCheck.checked
+      ? 'Fin de journée (voir disponibilités ci-dessous)'
+      : (slotsEl.querySelector('.r-slot.active') ? slotsEl.querySelector('.r-slot.active').dataset.label : 'Non précisé');
+    var contexte = document.getElementById('cb-contexte').value.trim();
+    var dispo = document.getElementById('cb-dispo').value.trim();
+    var to = 'contact@asso-respect.fr';
+    var subject = 'Site R.E.S.P.E.C.T — Rendez-vous téléphonique';
+    var bodyLines = [
+      'Prénom : ' + (prenom || 'non renseigné'),
+      'Téléphone : ' + tel,
+      'Créneau souhaité : ' + creneau,
+    ];
+    if (contexte) bodyLines.push('', 'Contexte : ' + contexte);
+    if (dispo) bodyLines.push('', 'Disponibilités : ' + dispo);
+    var mailto = 'mailto:' + to
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(bodyLines.join('\n'));
     window.location.href = mailto;
   });
 })();
