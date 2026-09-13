@@ -1588,6 +1588,8 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   .rsite .tabs::-webkit-scrollbar { display: none; }
   .rsite .tab { flex-shrink: 0; padding: 0.65rem 1rem; font-size: 0.7rem; font-weight: 500; color: #4a5e48; cursor: pointer; border: none; background: none; font-family: 'Inter', sans-serif; border-bottom: 3px solid transparent; white-space: nowrap; margin-bottom: -2px; }
   .rsite .tab.active { color: #1A2E1E; border-bottom-color: #1A2E1E; font-weight: 600; }
+  .rsite .tab-don { flex-shrink: 0; align-self: center; margin: 0 0.75rem 0 0.25rem; padding: 0.4rem 0.9rem; font-size: 0.68rem; font-weight: 600; color: #1A2418; background: #C9A84C; border-radius: 20px; text-decoration: none; white-space: nowrap; transition: background 0.15s ease; }
+  .rsite .tab-don:hover { background: #d8ba63; }
   .rsite .tab:hover:not(.active) { color: #1A2E1E; background: #f0f4ee; }
 
   /* SUB TABS */
