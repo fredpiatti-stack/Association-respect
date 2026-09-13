@@ -79,6 +79,36 @@
       </form>
     </div>
 
+    <div class="sec" id="candidature-benevole">
+      <div class="sec-label sl-green">Rejoindre l'association</div>
+      <div class="sec-h2">Candidature b&eacute;n&eacute;vole</div>
+      <p class="body">Dites-nous qui vous &ecirc;tes et comment vous souhaitez vous engager &mdash; nous revenons vers vous pour en parler.</p>
+      <form class="r-form" id="benevole-form">
+        <div class="r-row2">
+          <div><label for="bv-nom">Nom</label><input type="text" id="bv-nom" placeholder="Votre nom" required></div>
+          <div><label for="bv-email">Email</label><input type="email" id="bv-email" placeholder="vous@exemple.com" required></div>
+        </div>
+        <div>
+          <label for="bv-tel">T&eacute;l&eacute;phone (facultatif)</label>
+          <input type="tel" id="bv-tel" placeholder="06 12 34 56 78">
+        </div>
+        <div>
+          <label for="bv-role">R&ocirc;le souhait&eacute;</label>
+          <select id="bv-role">
+            <option value="&Eacute;coutant&middot;e b&eacute;n&eacute;vole">&Eacute;coutant&middot;e b&eacute;n&eacute;vole</option>
+            <option value="Coordinateur&middot;rice">Coordinateur&middot;rice</option>
+            <option value="Formateur&middot;rice">Formateur&middot;rice</option>
+            <option value="Sensibilisation">Sensibilisation</option>
+            <option value="Peu importe, &agrave; voir ensemble">Peu importe, &agrave; voir ensemble</option>
+          </select>
+        </div>
+        <div><label for="bv-motivation">Comp&eacute;tences et motivation (facultatif)</label><textarea id="bv-motivation" placeholder="Votre parcours, vos disponibilit&eacute;s, ce qui vous donne envie de rejoindre R.E.S.P.E.C.T..."></textarea></div>
+        <label class="r-check"><input type="checkbox" id="bv-consent" required><span>J'accepte que mes donn&eacute;es soient trait&eacute;es conform&eacute;ment &agrave; la <a href="confidentialite.html" style="color:#3A7050;">politique de confidentialit&eacute;</a>, dans le cadre de ma candidature b&eacute;n&eacute;vole.</span></label>
+        <button type="submit" class="btn btn-green" style="align-self:flex-start;">Envoyer ma candidature</button>
+        <p class="r-note">En cliquant sur envoyer, votre messagerie s'ouvre avec votre candidature pr&eacute;-remplie, pr&ecirc;te &agrave; nous &ecirc;tre adress&eacute;e.</p>
+      </form>
+    </div>
+
   <footer class="footer">
     <p>&copy; 2026 Association R.E.S.P.E.C.T &middot; Loi 1901</p>
     <div class="footer-logo">R&middot;E&middot;S&middot;P&middot;E&middot;C&middot;T</div>
@@ -163,6 +193,31 @@
     ];
     if (contexte) bodyLines.push('', 'Contexte : ' + contexte);
     if (dispo) bodyLines.push('', 'Disponibilités : ' + dispo);
+    var mailto = 'mailto:' + to
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+    window.location.href = mailto;
+  });
+})();
+(function () {
+  var form = document.getElementById('benevole-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nom = document.getElementById('bv-nom').value.trim();
+    var email = document.getElementById('bv-email').value.trim();
+    var tel = document.getElementById('bv-tel').value.trim();
+    var role = document.getElementById('bv-role').value;
+    var motivation = document.getElementById('bv-motivation').value.trim();
+    var to = 'contact@asso-respect.fr';
+    var subject = 'Site R.E.S.P.E.C.T — Candidature bénévole';
+    var bodyLines = [
+      'Nom : ' + nom,
+      'Email : ' + email,
+      'Téléphone : ' + (tel || 'non renseigné'),
+      'Rôle souhaité : ' + role,
+    ];
+    if (motivation) bodyLines.push('', 'Compétences et motivation : ' + motivation);
     var mailto = 'mailto:' + to
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(bodyLines.join('\n'));
