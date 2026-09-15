@@ -1588,6 +1588,9 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
        inclus) et tient sur un écran étroit ; .nav-links, lui, déborde et
        masque "Contact" sur mobile. On le retire, le logo seul suffit ici. */
     .rsite .nav-links { display: none; }
+    /* Avec .nav-links caché, le logo est seul dans .nav ; justify-content:
+       space-between le laisse collé à gauche. On le centre explicitement. */
+    .rsite .nav { justify-content: center; }
   }
 
   /* MAIN TABS */
