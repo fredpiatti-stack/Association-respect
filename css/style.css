@@ -1861,7 +1861,8 @@ body:has(.rsite) { background: #F2F5F0; }
    width than the screen has, which pushed "Contact" out of view even
    with a scrollable strip. Tighten paddings so everything fits at once. */
 @media (max-width: 480px) {
-  .rsite .tabs { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .rsite .tabs { padding-left: 0.75rem; padding-right: 0.75rem; justify-content: center; }
+  .rsite .tabs-scroll { flex: 0 1 auto; }
   .rsite .tab { padding: 0.6rem 0.55rem; font-size: 0.66rem; }
   .rsite .tab-don { margin: 0 0.4rem 0 0.15rem; padding: 0.35rem 0.65rem; font-size: 0.64rem; }
 }
