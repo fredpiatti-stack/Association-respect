@@ -1857,10 +1857,11 @@ body:has(.rsite) { background: #F2F5F0; }
 .rsite .conclu { padding-left: var(--edge); padding-right: var(--edge); }
 .rsite .footer { padding-left: var(--edge); padding-right: var(--edge); }
 
-/* Under ~480px, the 4 nav tabs + the "Faire un don" pill need more
-   width than the screen has, which pushed "Contact" out of view even
-   with a scrollable strip. Tighten paddings so everything fits at once. */
-@media (max-width: 480px) {
+/* Under 640px (same breakpoint as hiding .nav-links above, i.e. whenever
+   the tabs bar is the only nav), the 4 tabs + "Faire un don" need more
+   width than narrower/larger phones have, pushing "Contact" out of view.
+   Tighten paddings so everything fits, and center the whole row. */
+@media (max-width: 640px) {
   .rsite .tabs { padding-left: 0.75rem; padding-right: 0.75rem; justify-content: center; }
   .rsite .tabs-scroll { flex: 0 1 auto; }
   .rsite .tab { padding: 0.6rem 0.55rem; font-size: 0.66rem; }
