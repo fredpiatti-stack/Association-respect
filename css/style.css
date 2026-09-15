@@ -1583,6 +1583,13 @@ td.num, th.num { font-variant-numeric: tabular-nums; }
   .rsite .nav-btn.active, .rsite .nav-btn:hover { color: #E4EDE5; }
   .rsite .nav-btn.active { color: #6DBF8A; }
 
+  @media (max-width: 640px) {
+    /* Le bandeau .tabs juste en dessous reprend déjà ces liens (avec Contact
+       inclus) et tient sur un écran étroit ; .nav-links, lui, déborde et
+       masque "Contact" sur mobile. On le retire, le logo seul suffit ici. */
+    .rsite .nav-links { display: none; }
+  }
+
   /* MAIN TABS */
   .rsite .tabs { display: flex; align-items: center; background: #fff; border-bottom: 2px solid #d0d8cc; }
   .rsite .tabs-scroll { display: flex; overflow-x: auto; scrollbar-width: none; flex: 1 1 auto; min-width: 0; }
